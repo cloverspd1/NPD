@@ -1,0 +1,1003 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.Workflow.Models.Common
+@using NPD.Workflow.Models.Master;
+@using NPD.CommonDataContract;
+@using Newtonsoft.Json;
+@model NPDContract
+@{
+
+    NPDForm form = Model.Forms.FirstOrDefault() as NPDForm;
+    NPDDetailSection npdDetailSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDDETAILSECTION)) as NPDDetailSection;
+    NPDApprover1Section npdApprver1Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER1SECTION)) as NPDApprover1Section;
+    NPDApprover2Section npdApprver2Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER2SECTION)) as NPDApprover2Section;
+    NPDApprover3Section npdApprver3Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER3SECTION)) as NPDApprover3Section;
+    NPDABSAdminSection npdABSAdminSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDABSADMINSECTION)) as NPDABSAdminSection;
+    ActivityLogSection activityLog = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.ACTIVITYLOG)) as ActivityLogSection;
+    ApplicationStatusSection appStatus = form.SectionsList.FirstOrDefault(f => f != null && f.SectionName.Equals(SectionNameConstant.APPLICATIONSTATUS)) as ApplicationStatusSection;
+
+}
+
+<div class="hidden">
+    <div id="divprint">
+        <!DOCTYPE HTML>
+
+        <html>
+        <head>
+
+            <title>Print NPD</title>
+        </head>
+        <body>
+
+            <div id="printContent" class="col-md-12">
+                <style type="text/css">
+                    .modal-dialog {
+                        width: 75% !important;
+                    }
+                </style>
+
+                @if (npdDetailSection != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row borderBottom">
+                            <div class="col-xs-6 col-sm-6 col-md-6 rightBorder" style="vertical-align:middle">
+
+                                <div class=" col-xs-8 col-md-8 col-sm-8">
+                                    <img id="logo" src="~/images/BajajPrintLogo.png" height="50" />
+                                </div>
+                                <div class="col-xs-4 col-md-4 col-sm-4">
+                                </div>
+
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                    @Html.LabelFor(m => npdDetailSection.ProjectNo, ResourceNames.NPD)
+                                </div>
+                                <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                    @npdDetailSection.ProjectNo
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>NPD DETAIL SECTION</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        @if (!string.IsNullOrEmpty(npdDetailSection.OldProjectNo))
+                        {
+
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                            @Html.LabelFor(m => npdDetailSection.OldProjectNo, ResourceNames.NPD)
+                                        </div>
+                                        <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                            <div class="form-control noborder">
+                                                @Html.DisplayFor(m => npdDetailSection.OldProjectNo, ResourceNames.NPD)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                            @Html.LabelFor(m => npdDetailSection.OldNPDCreatedDate, ResourceNames.NPD)
+                                        </div>
+                                        <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                            <div class="form-control noborder">
+                                                @(npdDetailSection.OldNPDCreatedDate.HasValue ? npdDetailSection.OldNPDCreatedDate.Value.ToShortDateString() : string.Empty)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                            @Html.LabelFor(m => npdDetailSection.OldNPDRejectedDate, ResourceNames.NPD)
+                                        </div>
+                                        <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                            <div class="form-control noborder">
+                                                @(npdDetailSection.OldNPDRejectedDate.HasValue ? npdDetailSection.OldNPDRejectedDate.Value.ToShortDateString() : string.Empty)
+                                                @Html.HiddenFor(m => npdDetailSection.OldNPDRejectedDate)
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                </div>
+                            </div>
+                        }
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.ProposedBy, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(string.IsNullOrEmpty(npdDetailSection.ProposedByName) ? ViewBag.UserName : npdDetailSection.ProposedByName)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.Status, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+
+                                        @(string.IsNullOrEmpty(npdDetailSection.WorkflowStatus) ? Html.ResourceValue("Text_New", ResourceNames.Common) : npdDetailSection.WorkflowStatus)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.ProjectNo, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @Html.DisplayFor(m => npdDetailSection.ProjectNo, ResourceNames.NPD)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.BusinessUnit, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+
+                                        @npdDetailSection.BusinessUnit
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.RequestDate, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.RequestDate.HasValue ? npdDetailSection.RequestDate.Value.ToShortDateString() : "")
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.ProjectName, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @npdDetailSection.ProjectName
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.ProjectType, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.ProjectType)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.ProductCategory, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @npdDetailSection.ProductCategory
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.ReferenceBrandAndModel, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.ReferenceBrandAndModel)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.SampleRequired, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.SampleRequired != null && npdDetailSection.SampleRequired ? "Yes" : "No")
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @if (npdDetailSection.SampleRequired != null && npdDetailSection.SampleRequired)
+                        {
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                            @Html.LabelFor(m => npdDetailSection.FileNameList, ResourceNames.NPD)
+                                        </div>
+                                        <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdDetailSection.CreatorAttachment))
+                                        {
+                                            foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdDetailSection.CreatorAttachment))
+                                             {
+                                                 @file.FileName
+                                                 <div class="clearfix"></div>
+                                             }
+                                        }
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.VendorName, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.VendorName)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.VendorAddress, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @npdDetailSection.VendorAddress
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5><b>Product Feature</b></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-hover someTable text-center none-border margin-bottom-none">
+                                    <thead>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("Grid_ProductFeature_Header_Label_ProductFeature", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_ProductFeature_Header_Label_BajajBrand", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_ProductFeature_Header_Label_ReferenceBrand", ResourceNames.NPD)</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (npdDetailSection.NPDProductFeature != null && npdDetailSection.NPDProductFeature.Count > 0)
+                                        {
+                                            foreach (NPDProductFeature item in npdDetailSection.NPDProductFeature)
+                                            {
+                                                <tr>
+
+                                                    <td class="leftnone-border text-left">@item.ProductFeature</td>
+                                                    <td class="text-left">@item.BajajBrand</td>
+                                                    <td class="text-left">@item.ReferenceBrand</td>
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="3" class="text-center text-danger">
+                                                    @Html.ResourceValue("Grid_Text_NoProductFeatureData", ResourceNames.NPD)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.Gender, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.Gender)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.IncomeGroup, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @npdDetailSection.IncomeGroup
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.AgeGroup, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.AgeGroup)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.ProjectTrigger, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @npdDetailSection.ProjectTrigger
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.Regions, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.Regions)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.Channels, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @npdDetailSection.Channels
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.OtherChannels, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @npdDetailSection.OtherChannels
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5><b>Product Category Details</b></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-hover someTable text-center none-border margin-bottom-none">
+                                    <thead>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("CurrentSKUs", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("PhasedoutSKUs", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("CategorySales", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("AverageSales", ResourceNames.NPD)</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@npdDetailSection.CurrentSKUs</td>
+                                            <td class="text-left">@npdDetailSection.PhasedOutSKUs</td>
+                                            <td class="text-left">@npdDetailSection.CurrentSales </td>
+                                            <td class="text-left">@npdDetailSection.AverageSales</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5><b>Competitor Information of the Category</b></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-hover someTable text-center none-border margin-bottom-none">
+                                    <thead>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("Grid_ProductCompetitor_Header_Label_Brand", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_ProductCompetitor_Header_Label_SalesValue", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_ProductCompetitor_Header_Label_MarketShare", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_ProductCompetitor_Header_Label_SalesVolume", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_ProductCompetitor_Header_Label_RLP", ResourceNames.NPD)</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (npdDetailSection.NPDProductCompetitor != null && npdDetailSection.NPDProductCompetitor.Count > 0)
+                                        {
+                                            foreach (NPDProductCompetitor item in npdDetailSection.NPDProductCompetitor)
+                                            {
+                                                <tr>
+
+                                                    <td class="leftnone-border text-left">@item.Brand</td>
+                                                    <td class="text-left">@item.SalesValue</td>
+                                                    <td class="text-left">@item.MarketShare</td>
+                                                    <td class="text-left">@item.SalesVolume</td>
+                                                    <td class="text-left">@item.RLP</td>
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="3" class="text-center text-danger">
+                                                    @Html.ResourceValue("Grid_Text_NoProductCompetitor", ResourceNames.NPD)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5><b>Market Information</b></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-hover someTable text-center none-border margin-bottom-none">
+                                    <thead>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("MarketInformation_Marketinfocategory", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("MarketInformation_PrevYear", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("MarketInformation_CurrYear", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("MarketInformation_NextYear", ResourceNames.NPD)</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("MarketInformation_GrowthRate", ResourceNames.NPD)</td>
+                                            <td class="text-left">@npdDetailSection.mktPreviousYear1</td>
+                                            <td class="text-left">@npdDetailSection.mktCurrentYear1 </td>
+                                            <td class="text-left">@npdDetailSection.mktNextYear1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("MarketInformation_GrowthRate", ResourceNames.NPD)</td>
+                                            <td class="text-left">@npdDetailSection.mktPreviousYear2</td>
+                                            <td class="text-left">@npdDetailSection.mktCurrentYear2 </td>
+                                            <td class="text-left">@npdDetailSection.mktNextYear2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5><b>Cumulative Sales Projection</b></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-hover someTable text-center none-border margin-bottom-none">
+                                    <thead>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_Periods", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_Value", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_DesiredThroughput", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_BusinessSaliency", ResourceNames.NPD)</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (npdDetailSection.NPDCumulativeSalesProjection != null && npdDetailSection.NPDCumulativeSalesProjection.Count > 0)
+                                        {
+                                            foreach (NPDCumulativeSalesProjection item in npdDetailSection.NPDCumulativeSalesProjection)
+                                            {
+                                                <tr>
+
+                                                    <td class="leftnone-border text-left">@item.Periods</td>
+                                                    <td class="text-left">@item.Value</td>
+                                                    <td class="text-left">@item.DesiredThroughput</td>
+                                                    <td class="text-left">@item.BusinessSaliency</td>
+
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="3" class="text-center text-danger">
+                                                    @Html.ResourceValue("Grid_Text_NoCumulativeSalesProjection", ResourceNames.NPD)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5><b>Target RLP</b></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-hover someTable text-center none-border margin-bottom-none">
+                                    <thead>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_TargetRLP", ResourceNames.NPD)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_TargetTransferPrice", ResourceNames.NPD)</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (npdDetailSection.NPDTargetRLP != null && npdDetailSection.NPDTargetRLP.Count > 0)
+                                        {
+                                            foreach (NPDTargetRLP item in npdDetailSection.NPDTargetRLP)
+                                            {
+                                                <tr>
+
+                                                    <td class="leftnone-border text-left">@item.TargetRLP</td>
+                                                    <td class="text-left">@item.TargetTransferPrice</td>
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="3" class="text-center text-danger">
+                                                    @Html.ResourceValue("Grid_Text_NoTargetRLPData", ResourceNames.NPD)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.IntendedLaunchDate, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+
+                                        @(npdDetailSection.IntendedLaunchDate.HasValue ? npdDetailSection.IntendedLaunchDate.Value.ToShortDateString() : string.Empty)
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdDetailSection.RequestorComments, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8">
+                                        <span style="padding-left:20px;"></span>
+                                        @if (!string.IsNullOrWhiteSpace(npdDetailSection.RequestorComments))
+                                        {
+                                            @npdDetailSection.RequestorComments
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+                @if (npdApprver1Section != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>NPD APPROVER 1 SECTION</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.ResourceValue("Label_Comments", ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdApprver1Section.CurrentApprover.Comments))
+                                        {
+                                            @(npdApprver1Section.CurrentApprover.Comments)
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdApprver1Section.Approver1Attachment, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdApprver1Section.Approver1Attachment))
+                                        {
+                                            foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdApprver1Section.Approver1Attachment))
+                                            {
+                                                @file.FileName
+                                                <div class="clearfix"></div>
+                                            }
+                                        }
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (npdApprver2Section != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>NPD APPROVER 2 SECTION</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.ResourceValue("Label_Comments", ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdApprver2Section.CurrentApprover.Comments))
+                                        {
+                                            @(npdApprver2Section.CurrentApprover.Comments)
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdApprver2Section.Approver2Attachment, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdApprver2Section.Approver2Attachment))
+                                        {
+                                            foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdApprver2Section.Approver2Attachment))
+                                            {
+                                                @file.FileName
+                                                <div class="clearfix"></div>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (npdApprver3Section != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>NPD APPROVER 3 SECTION</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.ResourceValue("Label_Comments", ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdApprver3Section.CurrentApprover.Comments))
+                                        {
+                                            @(npdApprver3Section.CurrentApprover.Comments)
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdApprver3Section.Approver3Attachment, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdApprver3Section.Approver3Attachment))
+                                        {
+                                            foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdApprver3Section.Approver3Attachment))
+                                            {
+                                                @file.FileName
+                                                <div class="clearfix"></div>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (npdABSAdminSection != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>ABS ADMIN SECTION</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.ResourceValue("Label_Comments", ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdABSAdminSection.CurrentApprover.Comments))
+                                        {
+                                            @(npdABSAdminSection.CurrentApprover.Comments)
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdABSAdminSection.ABSAdminAttachment, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdABSAdminSection.ABSAdminAttachment))
+                                        {
+                                            foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdABSAdminSection.ABSAdminAttachment))
+                                            {
+                                                @file.FileName
+                                                <div class="clearfix"></div>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (appStatus != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>APPLICATION STATUS</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-hover someTable text-center none-border margin-bottom-none">
+                                    <thead>
+                                        <tr>
+                                            <td class="leftnone-border text-left">@Html.ResourceValue("Grid_Title_Role", ResourceNames.Common_ApplicationStatus)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_Title_Person", ResourceNames.Common_ApplicationStatus)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_Title_Status", ResourceNames.Common_ApplicationStatus)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_Title_AssignedDate", ResourceNames.Common_ApplicationStatus)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_Title_DueDate", ResourceNames.Common_ApplicationStatus)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_Title_ApprovedDate", ResourceNames.Common_ApplicationStatus)</td>
+                                            <td class="text-left">@Html.ResourceValue("Grid_Title_Comments", ResourceNames.Common_ApplicationStatus)</td>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (appStatus.ApplicationStatusList != null && appStatus.ApplicationStatusList.Count > 0)
+                                        {
+
+                                            foreach (var item in appStatus.ApplicationStatusList)
+                                            {
+                                                if (!string.IsNullOrEmpty(item.ApproverName))
+                                                {
+                                                    <tr>
+
+                                                        <td class="leftnone-border text-left">@item.Role</td>
+                                                        <td class="text-left">@((item.ApproverName ?? string.Empty).Replace(",", ", "))</td>
+                                                        <td>@(string.IsNullOrEmpty(item.Status) ? Html.ResourceValue("Text_NotAssigned", ResourceNames.Common_ApplicationStatus) : (item.Status == ApproverStatus.APPROVED) ? ApproverStatus.COMPLETED : item.Status)</td>
+                                                        <td>
+                                                            @{
+                                                    if (item.Role == "Creator")
+                                                    {
+                                                        @(item.ApprovalDate == null ? "-" : item.ApprovalDate.Value.ToShortDateString())
+                                                    }
+                                                    else
+                                                    {
+                                                        @(item.AssignDate == null ? "-" : item.AssignDate.Value.ToShortDateString())
+                                                    }
+                                                            }
+                                                        </td>
+                                                        <td>
+                                                            @{
+                                                    if (item.Role == "Creator")
+                                                    {
+                                                        @(item.ApprovalDate == null ? "-" : item.ApprovalDate.Value.ToShortDateString())
+                                                    }
+                                                    else
+                                                    {
+                                                        @(item.DueDate == null ? "-" : item.DueDate.Value.ToShortDateString())
+                                                    }
+                                                            }
+                                                        </td>
+                                                        <td>@(item.ApprovalDate != null && item.Status == ApproverStatus.APPROVED ? item.ApprovalDate.Value.ToShortDateString() : "-")</td>
+                                                        <td>@(string.IsNullOrEmpty(item.Comments) ? "-" : item.Comments)</td>
+                                                    </tr>
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="3" class="text-center text-danger">
+                                                    @Html.ResourceValue("Grid_Text_NoData", ResourceNames.NPD)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+
+
+
+        </body>
+    </html>
+</div>
+</div>
+
+<div class="modal fade" id="printModel" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-print"></i> Print NPD</h4>
+
+            </div>
+            <div class="modal-body">
+                <p><span class="text-danger text-default-light">@Html.ResourceValue("Text_Print", ResourceNames.Common)</span></p>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered someTable">
+
+                        <thead>
+                            <tr>
+                                <th>Attachment Name</th>
+                                <th>Print / Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    NPD Form
+                                </td>
+                                <td>
+
+                                    <a onclick="Print(this);" data-action="6" data-sendbackto="" data-sendtorole="" style="cursor:pointer !important">Print</a>&nbsp; | &nbsp;
+                                    <a onclick="PrintPreview(this);" data-action="6" data-sendbackto="" data-sendtorole="" style="cursor:pointer !important">Preview</a>
+                                </td>
+                            </tr>
+                            @if (npdDetailSection.Files != null && npdDetailSection.Files.Count != 0)
+                            {
+                                foreach (FileDetails item in npdDetailSection.Files)
+                                {
+                                    <tr>
+                                        <td>@item.FileName</td>
+                                        <td>
+                                            <a data-url="@item.FileURL" onclick="DownloadUploadedFile(this);" style="cursor:pointer !important"> Download and Print </a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>

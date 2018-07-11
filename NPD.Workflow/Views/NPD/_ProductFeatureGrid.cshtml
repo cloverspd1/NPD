@@ -1,0 +1,66 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.CommonDataContract
+@model List<ITrans>
+
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered someTable" id="productfeaturetable">
+        <thead>
+            <tr>
+                <th>@Html.ResourceValue("Grid_ProductFeature_Header_Label_ProductFeature", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("Grid_ProductFeature_Header_Label_BajajBrand", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("Grid_ProductFeature_Header_Label_ReferenceBrand", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("Grid_Title_Action", ResourceNames.Common)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count() > 0)
+            {
+                foreach (NPDProductFeature item in Model)
+                {
+                    <tr>
+
+                        @if (item.ProductFeature != null)
+                        {
+                            if (item.ProductFeature == "Must have" || item.ProductFeature == "Should have")
+                            {
+                                <td>
+                                    <span class="text-danger text-default-light">*</span>
+                                    @item.ProductFeature
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    @item.ProductFeature
+                                </td>
+                            }
+                        }
+
+
+
+                        <td>@item.BajajBrand</td>
+                        <td>@item.ReferenceBrand</td>
+                        <td>
+                            <a class="btn ink-reaction btn-floating-action" data-ajax="true" data-ajax-loading="#loading" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#divAddProductFeature" href="@Url.Action("AddProductFeature","NPD",new {index=@item.Index})">
+                                <i class='fa fa-edit'></i>
+                            </a>
+                            <a class="btn ink-reaction btn-floating-action btn-danger" onclick="ProductFeatureDelete('@item.Index');">
+                                <i class='fa fa-trash-o'></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="9" class="text-center text-danger">
+                        @Html.ResourceValue("Grid_Text_NoProductFeatureData", ResourceNames.NPD)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

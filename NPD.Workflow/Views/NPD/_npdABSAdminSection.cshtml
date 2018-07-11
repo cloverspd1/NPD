@@ -1,0 +1,71 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.Workflow.Models.Common
+@using NPD.Workflow.Models.Master;
+@using NPD.CommonDataContract;
+@model NPDABSAdminSection
+
+
+@using (Ajax.BeginForm("SaveABSAdminSection", "DCN", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+    @Html.HiddenFor(m => m.ListDetails[0].ListName)
+    @Html.HiddenFor(m => m.SectionName)
+    @Html.HiddenFor(m => m.ActionStatus)
+    @Html.HiddenFor(m => m.Status)
+    @Html.HiddenFor(m => m.SendBackTo)
+    @Html.Partial("_ApproversList", Model.ApproversList)
+    @Html.HiddenFor(m => m.OldNPDRejectedDate)
+    //@Html.AntiForgeryToken()
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-sm-4 control-label left">
+                    <span class="text-danger text-default-light">*</span>
+                    @Html.ResourceValue("Label_Comments", ResourceNames.NPD)
+                </label>
+                <div class="col-sm-8">
+                    <div class="form-control noborder text-left">
+                        @Html.TextAreaFor(m => m.CurrentApprover.Comments, new { maxlength = 255, @class = "form-control requiredOnSendBack", @data_val = "true", @data_val_required = "Comments/Remarks is required (max allow 255 char.)", data_toggle = "tooltip", title = "Max 255 characters" })
+                        @Html.HiddenFor(x => x.CurrentApprover.Approver)
+                        @Html.HiddenFor(x => x.CurrentApprover.Role)
+                        @Html.HiddenFor(x => x.CurrentApprover.AssignDate)
+                        @Html.ValidationMessageFor(m => m.CurrentApprover.Comments, ResourceNames.NPD)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" id="divAttachmentABS">
+            <div class="form-group">
+                <label class="col-sm-4 control-label left">
+                    @Html.LabelFor(m => m.ABSAdminAttachment, ResourceNames.NPD)
+
+                </label>
+                <div class="col-sm-8">
+                    <div class="form-control noborder text-left">
+                        <span class="text-danger text-default-light">
+                         Note: (Max. up to 2MB per file and you can upload maximum 10 files.) 
+                        </span>
+                        <div id="AttachmentABSAdmin" data-appname="@SiteURLs.NPDSITEURL">
+                        </div>
+                        @Html.TextBoxFor(m => m.ABSAdminAttachment, new { @class = "notvisible" })
+                        @Html.ValidationMessageFor(m => m.ABSAdminAttachment, ResourceNames.NPD)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+

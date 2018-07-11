@@ -1,0 +1,236 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.CommonDataContract
+@using NPD.Workflow.Models.Common
+@model  IContract
+@{
+    NPDContract contract = Model as NPDContract;
+   
+    NPDForm form = contract.Forms.FirstOrDefault() as NPDForm;
+    ViewBag.Title = "New Product Development";
+    NPDDetailSection npdDetailSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDDETAILSECTION)) as NPDDetailSection;
+
+    NPDApprover1Section npdApprver1Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER1SECTION)) as NPDApprover1Section;
+    NPDApprover2Section npdApprver2Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER2SECTION)) as NPDApprover2Section;
+    NPDApprover3Section npdApprver3Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER3SECTION)) as NPDApprover3Section;
+    NPDABSAdminSection npdABSAdminSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDABSADMINSECTION)) as NPDABSAdminSection;
+   
+}
+
+@if (form != null)
+{
+@section buttons{
+   
+   
+        @Html.Partial("_ButtonGroup", form.Buttons)
+   
+        
+    }
+
+    if (!string.IsNullOrEmpty(form.FormStatus))
+    {
+        <div class="card-body text-right pad-bot-15">
+            <div class="label label-primary">
+                @form.FormStatus
+            </div>
+        </div>
+    }
+
+
+    <div id="pageNPD">
+        <div id="tab-general">
+            <div class="row mbl">
+                <div class="col-lg-12">
+                    <div class="tab-content responsive " id="generalTabContent">
+                            @if (npdDetailSection != null)
+                        {
+                            string sectionActiveCss = npdDetailSection.IsActive ? string.Empty : "disabled";
+                            string isRetriveCase = !string.IsNullOrEmpty(Request.QueryString["IsRetrieve"]) ? "Style=background-color:#F2B7B7" : string.Empty;
+                                <div class="card @sectionActiveCss">
+                                    <div class="card-head" data-toggle="collapse" data-target="#sectiondetails1">
+                                        @Html.ResourceValue("Section_Title_NPDDetailDocumentSection", ResourceNames.NPD)
+                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                    </div>
+                                    <div class="card-body" id="sectiondetails1" @isRetriveCase>
+                                        <div class="form-horizontal">
+                                            <p><span class="text-danger text-default-light">@Html.ResourceValue("Text_Mandatory", ResourceNames.Common)</span></p>
+                                            @Html.Partial("_npdDetailSection", npdDetailSection)
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                        }
+                            @if (npdApprver1Section != null)
+                        {
+                            string npdApprover1Name = string.Empty;
+                                if(npdDetailSection != null)
+                                {
+                                    npdApprover1Name = npdDetailSection.ApproversList.FirstOrDefault(p => p.Role == NPDRoles.APPROVER1).ApproverName;
+                                    if (string.IsNullOrWhiteSpace(npdApprover1Name))
+                                    {
+                                        npdApprover1Name = "1 Section";
+                                    }
+                                    else
+                                    {
+                                        npdApprover1Name = npdApprover1Name + " Section";
+                                    }
+                                }
+                                
+                                
+                            string sectionActiveCss = npdApprver1Section.IsActive ? string.Empty : "disabled";
+                                <div class="card @sectionActiveCss">
+                                    <div class="card-head" data-toggle="collapse" data-target="#sectionapprover1">
+                                        @Html.ResourceValue("Section_Title_NPDApprover1Section", ResourceNames.NPD) @npdApprover1Name 
+
+                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                    </div>
+                                    <div class="card-body" id="sectionapprover1">
+                                        <div class="form-horizontal">
+
+                                            @Html.Partial("_npdApprover1Section", npdApprver1Section)
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                        }
+                            @if (npdApprver2Section != null)
+                        {
+                            string npdApprover2Name = string.Empty;
+                            if (npdDetailSection != null)
+                            {
+                                npdApprover2Name = npdDetailSection.ApproversList.FirstOrDefault(p => p.Role == NPDRoles.APPROVER2).ApproverName;
+                                if (string.IsNullOrWhiteSpace(npdApprover2Name))
+                                {
+                                    npdApprover2Name = "2 Section";
+                                }
+                                else
+                                {
+                                    npdApprover2Name = npdApprover2Name + " Section";
+                                }
+                            }
+                            string sectionActiveCss = npdApprver2Section.IsActive ? string.Empty : "disabled";
+                                <div class="card @sectionActiveCss">
+                                    <div class="card-head" data-toggle="collapse" data-target="#sectionapprover2">
+                                        @Html.ResourceValue("Section_Title_NPDApprover2Section", ResourceNames.NPD) @npdApprover2Name
+
+                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                    </div>
+                                    <div class="card-body" id="sectionapprover2">
+                                        <div class="form-horizontal">
+
+                                            @Html.Partial("_npdApprover2Section", npdApprver2Section)
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                        }
+                            @if (npdApprver3Section != null)
+                        {
+                            string npdApprover3Name = string.Empty;
+                            if (npdDetailSection != null)
+                            {
+                                npdApprover3Name = npdDetailSection.ApproversList.FirstOrDefault(p => p.Role == NPDRoles.APPROVER3).ApproverName;
+                                if (string.IsNullOrWhiteSpace(npdApprover3Name))
+                                {
+                                    npdApprover3Name = "3 Section";
+                                }
+                                else
+                                {
+                                    npdApprover3Name = npdApprover3Name + " Section";
+                                }
+                                
+                            }
+                           
+                            string sectionActiveCss = npdApprver3Section.IsActive ? string.Empty : "disabled";
+                                <div class="card @sectionActiveCss">
+                                    <div class="card-head" data-toggle="collapse" data-target="#sectionapprover3">
+                                        @Html.ResourceValue("Section_Title_NPDApprover3Section", ResourceNames.NPD) @npdApprover3Name
+
+                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                    </div>
+                                    <div class="card-body" id="sectionapprover3">
+                                        <div class="form-horizontal">
+
+                                            @Html.Partial("_npdApprover3Section", npdApprver3Section)
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                        }
+                            @if (npdABSAdminSection != null)
+                        {
+                            string sectionActiveCss = npdABSAdminSection.IsActive ? string.Empty : "disabled";
+                                <div class="card @sectionActiveCss">
+                                    <div class="card-head" data-toggle="collapse" data-target="#ABSAdminSection">
+                                        @Html.ResourceValue("Section_Title_NPDABSAdminSection", ResourceNames.NPD)
+
+                                        <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                    </div>
+                                    <div class="card-body" id="ABSAdminSection">
+                                        <div class="form-horizontal">
+
+                                            @Html.Partial("_npdABSAdminSection", npdABSAdminSection)
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                        }
+
+
+                            @{ApplicationStatusSection appStatus = form.SectionsList.FirstOrDefault(f => f != null && f.SectionName.Equals(SectionNameConstant.APPLICATIONSTATUS)) as ApplicationStatusSection;
+
+                        if (appStatus != null)
+                        {
+                            @Html.Partial("_ApplicationStatus", appStatus)
+                        }
+
+                        ActivityLogSection activityLog = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.ACTIVITYLOG)) as ActivityLogSection;
+                        if (activityLog != null)
+                        {
+                            @Html.Partial("_ActivityLogs", activityLog, new ViewDataDictionary { { "Resources", ResourceNames.NPD } })
+                        }
+                            }
+                        </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+    </div>
+
+    <div id="divAddProductFeature"></div>
+    <div id="divAddProductCompetitor"></div>
+    <div id="divAddCumulativeSalesProjection"></div>
+    <div id="divAddTargetRLP"></div>
+    <div class="scroll-top-wrapper ">
+        <i class="fa fa-chevron-up">
+        </i>
+    </div>
+    if (npdDetailSection != null)
+    {
+        if (npdDetailSection.Status == "Completed" || npdDetailSection.Status == "Rejected")
+        {
+            @Html.Partial("_printNPD", Model)
+        }
+    }
+
+    @section scripts{
+        @Scripts.Render("~/bundles/npdindex")
+        @Scripts.Render("~/bundles/npdheartbeat")
+
+    }
+  
+}
+
+
+
