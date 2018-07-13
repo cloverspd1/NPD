@@ -781,6 +781,7 @@
         /// </summary>
         /// <param name="terms">The terms.</param>
         /// <param name="isActive">if set to <c>true</c> [is active].</param>
+        /// 
         /// <param name="sectionNames">The section names.</param>
         /// <returns>Returns Dictionary of SectionName and IsActive</returns>
         public Dictionary<string, bool> GetTaxonomyFieldValueCollection(TaxonomyFieldValueCollection terms, bool isActive, Dictionary<string, bool> sectionNames)
