@@ -1,0 +1,52 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.CommonDataContract
+@model List<ITrans>
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered someTable" id="cumulativesalesprojectiontable">
+        <thead>
+            <tr>
+                <th>@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_Periods", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_Value", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_DesiredThroughput", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("Grid_CumulativeSalesProjection_Header_Label_BusinessSaliency", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("Grid_Title_Action", ResourceNames.Common)</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count() > 0)
+            {
+                foreach (NPDCumulativeSalesProjection item in Model)
+                {
+                    <tr>
+                        <td>@item.Periods</td>
+                        <td>@item.Value</td>
+                        <td>@item.DesiredThroughput</td>
+                        <td>@item.BusinessSaliency</td>
+
+                        <td>
+                            <a class="btn ink-reaction btn-floating-action" data-ajax="true" data-ajax-loading="#loading" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#divAddCumulativeSalesProjection" href="@Url.Action("AddCumulativeSalesProjection", "NPD", new { index = @item.Index })">
+                                <i class='fa fa-edit'></i>
+                            </a>
+                            <a class="btn ink-reaction btn-floating-action btn-danger" onclick="CumulativeSalesProjectionDelete('@item.Index');">
+                                <i class='fa fa-trash-o'></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="9" class="text-center text-danger">
+                        @Html.ResourceValue("Grid_Text_NoCumulativeSalesProjection", ResourceNames.NPD)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

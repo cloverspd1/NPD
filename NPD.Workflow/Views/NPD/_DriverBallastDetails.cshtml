@@ -1,0 +1,195 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.Workflow.Models.Common
+@using NPD.Workflow.Models.Master;
+@using NPD.CommonDataContract;
+@model NPDDetailSection
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.DriverType, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8 ">
+                <div class="form-control noborder">
+                    @Html.DropDownListFor(m => m.DriverType, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.DRIVERTYPEMASTER)) as DriverTypeMaster).Items.OrderBy(x => x.Title), "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.DriverType })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.DriverMake, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.DriverMake, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.DriverOutputVoltage, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.DriverOutputVoltage, new { maxlength = 15, @class = "form-control numberonly", data_toggle = "tooltip", title = "Max 15 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.DriverNominalCRI, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.DriverNominalCRI, new { maxlength = 15, @class = "form-control numberonly", data_toggle = "tooltip", title = "Max 15 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.LEDConfiguration, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.LEDConfiguration, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.LEDDrivingCurrent, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.LEDDrivingCurrent, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.PurposeOfTesting, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextAreaFor(m => m.PurposeOfTesting, new { maxlength = 1000, @class = "form-control textarea-height", data_toggle = "tooltip", title = "Max 1000 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.TestSpecification, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextAreaFor(m => m.TestSpecification, new { maxlength = 1000, @class = "form-control textarea-height", data_toggle = "tooltip", title = "Max 1000 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.PhotometricComment, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextAreaFor(m => m.PhotometricComment, new { maxlength = 1000, @class = "form-control textarea-height", data_toggle = "tooltip", title = "Max 1000 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.SpecificationSheet, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8 ">
+                <span class="text-danger text-default-light">
+                    Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                </span>
+                <div id="AttachmentSpecificationSheet" data-appname="@SiteURLs.NPDSITEURL">
+                </div>
+                @Html.TextBoxFor(m => m.SpecificationSheet, new { @class = "notvisible form-control" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.TechnicalDataSheet, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8 ">
+                <span class="text-danger text-default-light">
+                    Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                </span>
+                <div id="AttachmentTechnicalDataSheet" data-appname="@SiteURLs.NPDSITEURL">
+                </div>
+                @Html.TextBoxFor(m => m.TechnicalDataSheet, new { @class = "notvisible form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.TestReportsAttachment, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8 ">
+                <span class="text-danger text-default-light">
+                    Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                </span>
+                <div id="AttachmentTestReports" data-appname="@SiteURLs.NPDSITEURL">
+                </div>
+                @Html.TextBoxFor(m => m.TestReportsAttachment, new { @class = "notvisible form-control" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-md-1">
+            </label>
+            <div class="col-md-11">
+                <div class="form-control noborder">
+                    <p>@Html.Label("Notes", "Notes :", new { @class = "bold" })</p>
+                    <p>@Html.ResourceValue("Label_Noteone", ResourceNames.NPD)</p>
+                    <p>@Html.ResourceValue("Label_Notetwo", ResourceNames.NPD) </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,845 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.Workflow.Models.Common
+@using NPD.Workflow.Models.Master;
+@using NPD.CommonDataContract;
+@model NPDDetailSection
+
+<script type="text/javascript">
+    @{
+
+        List<MasterDataItem> gender = new List<MasterDataItem>();
+        gender.Add(new MasterDataItem("Male", "Male"));
+        gender.Add(new MasterDataItem("Female", "Female"));
+        gender.Add(new MasterDataItem("Others", "Others"));
+
+        ApproverMaster approverlist = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.APPROVERMASTER)) as ApproverMaster;
+        ProductCategoryMaster prodlist = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PRODUCTCATEGORYMASTER)) as ProductCategoryMaster;
+        ProductCategoryDetailMaster proddetailList = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PRODUCTCATEGORYDDETAIL)) as ProductCategoryDetailMaster;
+        ProjectTypeMaster projTypeList = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PROJECTTYPEMASTER)) as ProjectTypeMaster;
+
+
+
+
+      }
+
+
+    var Approverlist = JSON.parse(@(new HtmlString(Json.Encode(Newtonsoft.Json.JsonConvert.SerializeObject(approverlist.Items.ToList())))));
+    var ProductCategoryDetailList = JSON.parse(@(new HtmlString(Json.Encode(Newtonsoft.Json.JsonConvert.SerializeObject(proddetailList.Items.ToList())))));
+    var ProductCategoryList = JSON.parse(@(new HtmlString(Json.Encode(Newtonsoft.Json.JsonConvert.SerializeObject(prodlist.Items.OrderBy(p => p.Title).ToList())))));
+    var ProjectTypeList = JSON.parse(@(new HtmlString(Json.Encode(Newtonsoft.Json.JsonConvert.SerializeObject(projTypeList.Items.OrderBy(x => x.Title).ToList())))));
+
+</script>
+<div id="divDocEngineerSection">
+    @using (Ajax.BeginForm("SaveNPDDetailSection", "NPD", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        LoadingElementId = "loading",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        OnBegin = "BeginClient"
+    }, new { enctype = "multipart/form-data" }))
+    {
+
+        @Html.HiddenFor(m => m.ListDetails[0].ItemId)
+        @Html.HiddenFor(m => m.ListDetails[0].ListName)
+        @Html.HiddenFor(m => m.SectionName)
+        @Html.HiddenFor(m => m.ActionStatus)
+        @Html.HiddenFor(m => m.Status)
+        @Html.HiddenFor(m => m.RequestViewer)
+        @Html.HiddenFor(m => m.RequestViewerName)
+        @Html.HiddenFor(m => m.CopyFrom)
+        @*@Html.Partial("_ApproversList", Model.ApproversList)*@
+        @Html.Partial("_CurrentApprover", Model.CurrentApprover ?? new ApplicationStatus())
+        //@Html.AntiForgeryToken()
+
+        if (!string.IsNullOrEmpty(Model.OldProjectNo))
+        {
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">
+                            @Html.LabelFor(m => m.OldProjectNo, ResourceNames.NPD)
+                        </label>
+                        <div class="col-md-8 ">
+                            <div class="form-control noborder">
+                                @Html.DisplayFor(m => m.OldProjectNo, ResourceNames.NPD)
+                                @Html.HiddenFor(m => m.OldProjectNo)
+                                @Html.HiddenFor(m => m.OldNPDId)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">
+                            @Html.LabelFor(m => m.OldNPDCreatedDate, ResourceNames.NPD)
+                        </label>
+                        <div class="col-md-8 ">
+                            <div class="form-control noborder">
+                                @(Model.OldNPDCreatedDate.HasValue ? Model.OldNPDCreatedDate.Value.ToShortDateString() : string.Empty)
+                                @Html.HiddenFor(m => m.OldNPDCreatedDate)
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">
+                            @Html.LabelFor(m => m.OldNPDRejectedDate, ResourceNames.NPD)
+                        </label>
+                        <div class="col-md-8 ">
+                            <div class="form-control noborder">
+                                @(Model.OldNPDRejectedDate.HasValue ? Model.OldNPDRejectedDate.Value.ToShortDateString() : string.Empty)
+                                @Html.HiddenFor(m => m.OldNPDRejectedDate)
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+        }
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        @Html.LabelFor(m => m.ProposedBy, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @(string.IsNullOrEmpty(Model.ProposedByName) ? ViewBag.UserName : Model.ProposedByName)
+                            @Html.Hidden("ProposedBy", string.IsNullOrEmpty(Model.ProposedBy) ? (string)ViewBag.UserID : Model.ProposedBy)
+                            @Html.Hidden("ProposedByName", string.IsNullOrEmpty(Model.ProposedByName) ? (string)ViewBag.UserName : Model.ProposedByName)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="col-md-4 control-label">
+                        @Html.LabelFor(m => m.Status, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            <span class="text-danger" id="Status">
+                                <b>
+                                    @(string.IsNullOrEmpty(Model.WorkflowStatus) ? Html.ResourceValue("Text_New", ResourceNames.Common) : Model.WorkflowStatus)
+                                </b>
+                            </span>
+                            @Html.HiddenFor(m => m.Status)
+                            @Html.HiddenFor(m => m.WorkflowStatus)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+
+                        @Html.LabelFor(m => m.ProjectNo, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            <span class="text-danger" id="ReferenceNo">
+                                <b>
+                                    @Html.DisplayFor(m => m.ProjectNo, ResourceNames.NPD)
+                                    @Html.HiddenFor(m => m.ProjectNo)
+                                </b>
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.BusinessUnit, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+
+                        @if (!string.IsNullOrWhiteSpace(Model.WorkflowStatus) && Model.WorkflowStatus.Contains("Sent back"))
+                        {
+                            <div class="form-control noborder disabled">
+                                @Html.DropDownListFor(m => m.BusinessUnit, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.BUSINESSUNITMASTER)) as BusinessUnitMaster).Items.OrderBy(x => x.Title), "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.BusinessUnit })
+                                @Html.ValidationMessageFor(m => m.BusinessUnit, ResourceNames.NPD)
+
+
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="form-control noborder disabled">
+                                @Html.DropDownListFor(m => m.BusinessUnit, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.BUSINESSUNITMASTER)) as BusinessUnitMaster).Items.OrderBy(x => x.Title), "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.BusinessUnit })
+                                @Html.ValidationMessageFor(m => m.BusinessUnit, ResourceNames.NPD)
+
+
+                            </div>
+                        }
+
+                        @Html.HiddenFor(m => m.BusinessUnit)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        @Html.LabelFor(m => m.RequestDate, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @(Model.RequestDate.HasValue ? Model.RequestDate.Value.ToShortDateString() : "")
+                            @Html.Hidden("RequestDate", Model.RequestDate.HasValue ? Model.RequestDate.Value.ToShortDateString() : "")
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.ProjectName, ResourceNames.NPD)
+
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @Html.TextBoxFor(m => m.ProjectName, new { maxLength = 150, @class = "form-control", data_toggle = "tooltip", title = "Max 150 characters" })
+                            @Html.ValidationMessageFor(m => m.ProjectName, ResourceNames.NPD)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.ProjectType, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @if (!string.IsNullOrWhiteSpace(Model.WorkflowStatus) && Model.WorkflowStatus.Contains("Sent back"))
+                            {
+                                <div class="form-control noborder disabled">
+                                    @Html.DropDownListFor(m => m.ProjectType, new SelectList(new List<SelectListItem>()), "Select", new { @class = "form-control", @data_selected = Model.ProjectType })
+                                    @Html.ValidationMessageFor(m => m.ProjectType, ResourceNames.NPD)
+
+
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="form-control noborder">
+                                    @Html.DropDownListFor(m => m.ProjectType, new SelectList(new List<SelectListItem>()), "Select", new { @class = "form-control", @data_selected = Model.ProjectType })
+                                    @Html.ValidationMessageFor(m => m.ProjectType, ResourceNames.NPD)
+
+
+                                </div>
+                            }
+
+                            @Html.HiddenFor(m => m.ProjectType)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.ProductCategory, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8">
+                        <div class="form-control noborder">
+                            @if (!string.IsNullOrWhiteSpace(Model.WorkflowStatus) && Model.WorkflowStatus.Contains("Sent back"))
+                            {
+                                <div class="form-control noborder disabled">
+                                    @Html.DropDownListFor(m => m.ProductCategory, new SelectList(new List<SelectListItem>()), "Select", new { @class = "form-control", @data_selected = Model.ProductCategory })
+                                    @Html.ValidationMessageFor(m => m.ProductCategory, ResourceNames.NPD)
+
+
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="form-control noborder">
+                                    @Html.DropDownListFor(m => m.ProductCategory, new SelectList(new List<SelectListItem>()), "Select", new { @class = "form-control", @data_selected = Model.ProductCategory })
+                                    @Html.ValidationMessageFor(m => m.ProductCategory, ResourceNames.NPD)
+
+
+                                </div>
+                            }
+
+                            @Html.HiddenFor(m => m.ProductCategory)
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.ReferenceBrandAndModel, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @Html.TextBoxFor(m => m.ReferenceBrandAndModel, new { maxLength = 150, @class = "form-control", data_toggle = "tooltip", title = "Max 150 characters" })
+                            @Html.ValidationMessageFor(m => m.ReferenceBrandAndModel, ResourceNames.NPD)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.SampleRequired, ResourceNames.NPD)
+
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @Html.RadioButtonFor(m => m.SampleRequired, "True", new { @Id = "SampleRequired1" })
+                            <label for="sampleRequired1">Yes</label>
+                            @Html.RadioButtonFor(m => m.SampleRequired, "False", new { @Id = "SampleRequired1" })
+                            <label for="sampleRequired2">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        @*<span class="text-danger text-default-light">*</span>*@
+
+
+                    </label>
+                    <div class="col-md-8 ">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 attachment">
+                <div class="form-group">
+                    <label for="FileNameList" class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.FileNameList, ResourceNames.NPD):
+                    </label>
+                    <div class="col-md-8 ">
+                        <span class="text-danger text-default-light">
+                            Note: (Max. up to 2MB per file and you can upload maximum 10 files.)
+                        </span>
+                        <div id="AttachFile" data-appname="@SiteURLs.NPDSITEURL">
+                        </div>
+                        @Html.TextBoxFor(m => m.CreatorAttachment, new { @class = "notvisible" })
+
+                        @Html.ValidationMessageFor(m => m.CreatorAttachment, ResourceNames.NPD)
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        @Html.LabelFor(m => m.VendorName, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8">
+                        <div class="form-control noborder">
+                            @Html.TextBoxFor(m => m.VendorName, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                            @Html.ValidationMessageFor(m => m.VendorName, ResourceNames.NPD)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+
+                        @Html.LabelFor(m => m.VendorAddress, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8">
+                        <div class="form-control noborder">
+                            @Html.TextAreaFor(m => m.VendorAddress, new { maxlength = 1000, @class = "form-control", data_toggle = "tooltip", title = "Max 1000 characters" })
+                            @Html.ValidationMessageFor(m => m.VendorAddress, ResourceNames.NPD)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="applicationstatusbody">
+            @Html.Partial("_Approvers", Model.ApproversList)
+        </div>
+
+        <div class="form-horizontal" id="divProductFeature">
+            <div class="row">
+                <div class="col-sm-6 text-left" style="padding:10px;">
+                    <h4><b>Product Feature</b></h4>
+                </div>
+                <div class="col-sm-6 text-right" style="padding:10px;">
+                    @Ajax.ActionLink("Add Product Feature", "AddProductFeature", "NPD", new AjaxOptions() { UpdateTargetId = "divAddProductFeature", HttpMethod = "GET", InsertionMode = InsertionMode.Replace, LoadingElementId = "loading" }, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+            <div id="divProductFeatureGrid" class="panel-body grid-view">
+                @Html.Partial("_ProductFeatureGrid", Model.NPDProductFeature.ToList<ITrans>())
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.Gender, ResourceNames.NPD):
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @*@Html.CheckBoxList("IncomeGroupList", gender.ToArray(), true, "col-md-4 no-pad", Model.IncomeGroup)
+                                @Html.TextBoxFor(m => m.Gender, new { @class = "notvisible" })
+                                @Html.ValidationMessageFor(m => m.Gender)*@
+
+
+                            @Html.ListBox("GenderList", new MultiSelectList(gender.ToArray(), "Value", "Title"), new { @id = "GenderList", @Name = "GenderList", @class = "form-control", @data_selected = Model.Gender })
+                            @Html.ValidationMessageFor(m => m.Gender, ResourceNames.NPD)
+                            @Html.ValidationMessage("GenderList", Html.ResourceValue("Error_Gender", ResourceNames.NPD))
+                            @Html.HiddenFor(m => m.Gender)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.IncomeGroup, ResourceNames.NPD):
+
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @*@Html.CheckBoxList("IncomeGroupList", (Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.INCOMEGROUPMASTER)) as IncomeGroupMaster).Items.ToArray(), true, "col-md-4 no-pad", Model.IncomeGroup)
+                                @Html.TextBoxFor(m => m.IncomeGroup, new { @class = "notvisible" })
+                                @Html.ValidationMessageFor(m => m.IncomeGroup)*@
+
+
+
+
+                            @Html.ListBox("IncomeGroupList", new MultiSelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.INCOMEGROUPMASTER)) as IncomeGroupMaster).Items.ToArray(), "Value", "Title"), new { @id = "IncomeGroupList", @Name = "IncomeGroupList", @class = "form-control", @data_selected = Model.IncomeGroup })
+                            @Html.ValidationMessageFor(m => m.IncomeGroup, ResourceNames.NPD)
+                            @Html.ValidationMessage("IncomeGroupList", Html.ResourceValue("Error_IncomeGroup", ResourceNames.NPD))
+                            @Html.HiddenFor(m => m.IncomeGroup)
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.AgeGroup, ResourceNames.NPD):
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @*@Html.CheckBoxList("AgeGroupList", (Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.AGEGROUPMASTER)) as AgeGroupMaster).Items.ToArray(), true, "col-md-4 no-pad", Model.AgeGroup)
+                                @Html.TextBoxFor(m => m.AgeGroup, new { @class = "notvisible" })
+                                @Html.ValidationMessageFor(m => m.AgeGroup)*@
+
+                            @Html.ListBox("AgeGroupList", new MultiSelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.AGEGROUPMASTER)) as AgeGroupMaster).Items.ToArray(), "Value", "Title"), new { @id = "AgeGroupList", @Name = "AgeGroupList", @class = "form-control", @data_selected = Model.AgeGroup })
+                            @Html.ValidationMessageFor(m => m.AgeGroup, ResourceNames.NPD)
+                            @Html.ValidationMessage("AgeGroupList", Html.ResourceValue("Error_AgeGroup", ResourceNames.NPD))
+                            @Html.HiddenFor(m => m.AgeGroup)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.ProjectTrigger, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @Html.DropDownListFor(m => m.ProjectTrigger, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PROJECTTRIGGERMASTER)) as ProjectTriggerMaster).Items.OrderBy(x => x.Title), "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.ProjectTrigger })
+                            @Html.ValidationMessageFor(m => m.ProjectTrigger, ResourceNames.NPD)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.Regions, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @*@Html.CheckBoxList("RegionsList", (Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.REGIONSMASTER)) as RegionsMaster).Items.ToArray(), true, "col-md-4 no-pad", Model.Regions)
+                                @Html.TextBoxFor(m => m.Regions, new { @class = "notvisible" })
+                                @Html.ValidationMessageFor(m => m.Regions)*@
+
+                            @Html.ListBox("RegionsList", new MultiSelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.REGIONSMASTER)) as RegionsMaster).Items.OrderBy(x => x.Title).ToArray(), "Value", "Title"), new { @id = "RegionsList", @Name = "RegionsList", @class = "form-control", @data_selected = Model.Regions })
+                            @Html.ValidationMessageFor(m => m.Regions, ResourceNames.NPD)
+                            @Html.ValidationMessage("RegionsList", Html.ResourceValue("Error_Regions", ResourceNames.NPD))
+                            @Html.HiddenFor(m => m.Regions)
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.Channels, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @*@Html.CheckBoxList("ChannelsList", (Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.CHANNELSMASTER)) as ChannelsMaster).Items.ToArray(), true, "col-md-4 no-pad", Model.Channels)
+                                @Html.TextBoxFor(m => m.Channels, new { @class = "notvisible" })
+                                @Html.ValidationMessageFor(m => m.Channels)*@
+
+                            @Html.ListBox("ChannelsList", new MultiSelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.CHANNELSMASTER)) as ChannelsMaster).Items.OrderBy(x => x.Title).ToArray(), "Value", "Title"), new { @id = "ChannelsList", @Name = "ChannelsList", @class = "form-control", @data_selected = Model.Channels })
+                            @Html.ValidationMessageFor(m => m.Channels, ResourceNames.NPD)
+                            @Html.ValidationMessage("ChannelsList", Html.ResourceValue("Error_Regions", ResourceNames.NPD))
+                            @Html.HiddenFor(m => m.Channels)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group otherChannels">
+                    <label class="col-md-4 control-label">
+
+                        @Html.LabelFor(m => m.OtherChannels, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @Html.TextBoxFor(m => m.OtherChannels, new { maxLength = 150, @class = "form-control", data_toggle = "tooltip", title = "Max 150 characters" })
+                            @Html.ValidationMessageFor(m => m.OtherChannels, ResourceNames.NPD)
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-horizontal" id="divProductCategoryDetails">
+            <div class="row">
+                <div class="col-sm-6 text-left" style="padding:10px;">
+                    <h4><b>Product Category Details</b></h4>
+                </div>
+                <div class="col-sm-6 text-right" style="padding:10px;">
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered someTable" id="marketinformationtable">
+                        <thead>
+                            <tr>
+                                <th>@Html.ResourceValue("CurrentSKUs", ResourceNames.NPD)</th>
+                                <th>@Html.ResourceValue("PhasedoutSKUs", ResourceNames.NPD)</th>
+                                <th>@Html.ResourceValue("CategorySales", ResourceNames.NPD)</th>
+                                <th>@Html.ResourceValue("AverageSales", ResourceNames.NPD)</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="CurrentSKUs">
+                                        @Html.DisplayFor(m => m.CurrentSKUs, new { @class = "form-control" })
+                                    </span>
+                                    @Html.HiddenFor(m => m.CurrentSKUs)
+                                </td>
+                                <td>
+                                    <span class="PhasedOutSKUs">
+                                        @Html.DisplayFor(m => m.PhasedOutSKUs, new { @class = "form-control" })
+                                    </span>
+                                    @Html.HiddenFor(m => m.PhasedOutSKUs)
+                                </td>
+                                <td>
+                                    <span class="CurrentSales">
+                                        @Html.DisplayFor(m => m.CurrentSales, new { @class = "form-control" })
+                                    </span>
+                                    @Html.HiddenFor(m => m.CurrentSales)
+                                </td>
+                                <td>
+                                    <span class="AverageSales">
+                                        @Html.DisplayFor(m => m.AverageSales, new { @class = "form-control" })
+                                    </span>
+                                    @Html.HiddenFor(m => m.AverageSales)
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-horizontal" id="divProductCompetitor">
+            <div class="row">
+                <div class="col-sm-6 text-left" style="padding:10px;">
+                    <h4><b>Competitor Information of the Category</b></h4>
+                </div>
+                <div class="col-sm-6 text-right" style="padding:10px;">
+
+                    @Ajax.ActionLink("Add Competitor Information of the Category", "AddProductCompetitor", "NPD", new AjaxOptions() { UpdateTargetId = "divAddProductCompetitor", HttpMethod = "GET", InsertionMode = InsertionMode.Replace, LoadingElementId = "loading" }, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+            <div id="divProductCompetitorInfoGrid" class="panel-body grid-view">
+                @Html.Partial("_ProductCompetitorInformationGrid", Model.NPDProductCompetitor.ToList<ITrans>())
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+
+            <div class="col-sm-12 text-left" style="padding:10px;">
+                <h4><b>Market Information</b></h4>
+            </div>
+            <div class="col-sm-12" style="padding:10px;">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered someTable" id="marketinformationtable">
+                        <thead>
+                            <tr>
+                                <th>@Html.ResourceValue("MarketInformation_Marketinfocategory", ResourceNames.NPD)</th>
+                                <th>@Html.ResourceValue("MarketInformation_PrevYear", ResourceNames.NPD)</th>
+                                <th>@Html.ResourceValue("MarketInformation_CurrYear", ResourceNames.NPD)</th>
+                                <th>@Html.ResourceValue("MarketInformation_NextYear", ResourceNames.NPD)</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.ResourceValue("MarketInformation_GrowthRate", ResourceNames.NPD)
+                                </td>
+                                <td>
+                                    @Html.TextBoxFor(m => m.mktPreviousYear1, new { maxLength = 15, @class = "form-control numberonlywithnegativevalues", data_toggle = "tooltip", title = "Max 15 characters" })
+                                    @Html.ValidationMessageFor(m => m.mktPreviousYear1, ResourceNames.NPD)
+                                </td>
+                                <td>
+                                    @Html.TextBoxFor(m => m.mktCurrentYear1, new { maxLength = 15, @class = "form-control numberonlywithnegativevalues", data_toggle = "tooltip", title = "Max 15 characters" })
+                                    @Html.ValidationMessageFor(m => m.mktCurrentYear1, ResourceNames.NPD)
+                                </td>
+                                <td>
+                                    @Html.TextBoxFor(m => m.mktNextYear1, new { maxLength = 15, @class = "form-control numberonlywithnegativevalues", data_toggle = "tooltip", title = "Max 15 characters" })
+                                    @Html.ValidationMessageFor(m => m.mktNextYear1, ResourceNames.NPD)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="text-danger text-default-light">*</span>
+                                    @Html.ResourceValue("MarketInformation_SizeOfINR", ResourceNames.NPD)
+                                </td>
+                                <td>
+                                    @Html.TextBoxFor(m => m.mktPreviousYear2, new { maxLength = 15, @class = "form-control numberonly fixedtwodecimal", data_toggle = "tooltip", title = "Max 15 characters" })
+                                    @Html.ValidationMessageFor(m => m.mktPreviousYear2, ResourceNames.NPD)
+                                </td>
+                                <td>
+                                    @Html.TextBoxFor(m => m.mktCurrentYear2, new { maxLength = 15, @class = "form-control numberonly fixedtwodecimal", data_toggle = "tooltip", title = "Max 15 characters" })
+                                    @Html.ValidationMessageFor(m => m.mktCurrentYear2, ResourceNames.NPD)
+                                </td>
+                                <td>
+                                    @Html.TextBoxFor(m => m.mktNextYear2, new { maxLength = 15, @class = "form-control numberonly fixedtwodecimal", data_toggle = "tooltip", title = "Max 15 characters" })
+                                    @Html.ValidationMessageFor(m => m.mktNextYear2, ResourceNames.NPD)
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.ProductPositioning, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class="form-control noborder">
+                            @Html.DropDownListFor(m => m.ProductPositioning, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PRODUCTPOSITIONINGMASTER)) as ProductPositioningMaster).Items.OrderBy(x => x.Title), "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.ProductPositioning })
+                            @Html.ValidationMessageFor(m => m.ProductPositioning, ResourceNames.NPD)
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+
+                    </label>
+                    <div class="col-md-8">
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-horizontal" id="divCumulativeSales">
+            <div class="row">
+                <div class="col-sm-6 text-left" style="padding:10px;">
+                    <h4><b>Cumulative Sales Projection</b></h4>
+                </div>
+                <div class="col-sm-6 text-right" style="padding:10px;">
+
+                    @Ajax.ActionLink("Add Cumulative Sales Projection", "AddCumulativeSalesProjection", "NPD", new AjaxOptions() { UpdateTargetId = "divAddCumulativeSalesProjection", HttpMethod = "GET", InsertionMode = InsertionMode.Replace, LoadingElementId = "loading" }, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+            <div id="divCumulativeSalesProjectionGrid" class="panel-body grid-view">
+                @Html.Partial("_CumulativeSalesProjectionGrid", Model.NPDCumulativeSalesProjection.ToList<ITrans>())
+            </div>
+        </div>
+        <div class="form-horizontal" id="divTargetRLP">
+            <div class="row">
+                <div class="col-sm-6 text-left" style="padding:10px;">
+                    <h4><b>Target RLP</b></h4>
+                </div>
+                <div class="col-sm-6 text-right" style="padding:10px;">
+
+                    @Ajax.ActionLink("Add Target RLP", "AddTargetRLP", "NPD", new AjaxOptions() { UpdateTargetId = "divAddTargetRLP", HttpMethod = "GET", InsertionMode = InsertionMode.Replace, LoadingElementId = "loading" }, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+            <div id="divTargetRLPGrid" class="panel-body grid-view">
+                @Html.Partial("_TargetRLPGrid", Model.NPDTargetRLP.ToList<ITrans>())
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.IntendedLaunchDate, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8 ">
+                        <div class='input-group date datepicker'>
+                            @Html.TextBoxFor(m => m.IntendedLaunchDate, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>
+                        @Html.ValidationMessageFor(m => m.IntendedLaunchDate, ResourceNames.NPD)
+                        @*<div class="form-control noborder">
+
+                                @Html.TextBoxFor(m => m.IntendedLaunchDate, new { maxLength = 150, @class = "form-control", data_toggle = "tooltip", title = "Max 150 characters" })
+                                @Html.ValidationMessageFor(m => m.IntendedLaunchDate, ResourceNames.NPD)
+
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">
+                        <span class="text-danger text-default-light">*</span>
+                        @Html.LabelFor(m => m.RequestorComments, ResourceNames.NPD)
+                    </label>
+                    <div class="col-md-8">
+                        @Html.TextAreaFor(m => m.RequestorComments, new { maxlength = 255, @class = "form-control", @data_val = "true", @data_val_required = "Please Enter Comment", data_toggle = "tooltip", title = "Max 255 characters" })
+                        @Html.ValidationMessageFor(m => m.RequestorComments, ResourceNames.NPD)
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div id="divPhotometricTest">
+            <div class="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-12 text-left" style="padding:10px;">
+                        <h4><b>Photometric Test Request Form (For Internal use only) </b></h4>
+                    </div>
+                </div>
+                <div id="divPhotometricTestSection">
+                    @Html.Partial("_PhotometricTest", Model)
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-12 text-left" style="padding:10px;">
+                        <h4><b>Light Source Details</b></h4>
+                    </div>
+                </div>
+                <div id="divLightSourceDetails">
+                    @Html.Partial("_LightSourceDetails", Model)
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-12 text-left" style="padding:10px;">
+                        <h4><b>Driver/Ballast Details</b></h4>
+                    </div>
+                </div>
+                <div id="divLightSourceDetails">
+                    @Html.Partial("_DriverBallastDetails", Model)
+                </div>
+            </div>
+
+        </div>
+    }
+
+</div>

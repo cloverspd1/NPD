@@ -1,0 +1,100 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.Workflow.Models.Common
+@using NPD.Workflow.Models.Master;
+@using NPD.CommonDataContract;
+@model NPDDetailSection
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-md-2 control-label">
+                @Html.LabelFor(m => m.TypeOfLightSource, ResourceNames.NPD)
+            </label>
+            <div class="col-md-4">
+                <div class="form-control noborder">
+                    @Html.DropDownListFor(m => m.TypeOfLightSource, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.LIGHTSOURCEMASTER)) as LightSourceMaster).Items.OrderBy(x => x.Title), "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.TypeOfLightSource })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.NoOfLampLED, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.NoOfLampLED, new { maxlength = 15, @class = "form-control numberonly", data_toggle = "tooltip", title = "Max 15 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.LampLEDMake, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.LampLEDMake, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.LEDPartNumber, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.LEDPartNumber, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.LEDBin, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.LEDBin, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.NominalCCT, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.NominalCCT, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.NominalCRI, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.NominalCRI, new { maxlength = 255, @class = "form-control", data_toggle = "tooltip", title = "Max 255 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

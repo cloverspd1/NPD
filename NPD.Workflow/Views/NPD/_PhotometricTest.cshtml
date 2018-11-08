@@ -1,0 +1,62 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.Workflow.Models.Common
+@using NPD.Workflow.Models.Master;
+@using NPD.CommonDataContract;
+@model NPDDetailSection
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.TestSample, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8 ">
+                <div class="form-control noborder">
+                    @Html.DropDownListFor(m => m.TestSample, new SelectList((Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.TESTSAMPLETYPESMASTER)) as TestSampleTypesMaster).Items.OrderBy(x => x.Title), "Value", "Title"), "Select", new { @class = "form-control", @data_selected = Model.TestSample })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">        
+                @Html.LabelFor(m => m.TotalNoOfIdenticalTestSample, ResourceNames.NPD)
+
+            </label>
+            <div class="col-md-8 ">
+                <div class="form-control noborder">
+                    @Html.TextBoxFor(m => m.TotalNoOfIdenticalTestSample, new { maxLength = 15, @class = "form-control numberonly", data_toggle = "tooltip", title = "Max 15 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label">
+                @Html.LabelFor(m => m.ProductDescription, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <div class="form-control noborder">
+                    @Html.TextAreaFor(m => m.ProductDescription, new { maxlength = 1000, @class = "form-control textarea-height", data_toggle = "tooltip", title = "Max 1000 characters" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label class="col-md-4 control-label" id="AttachmentImage">
+                @Html.LabelFor(m => m.ProductImage, ResourceNames.NPD)
+            </label>
+            <div class="col-md-8">
+                <span class="text-danger text-default-light">
+                    Note: (Max.up to 2MB per file and you can upload maximum 10 files.)
+                </span>
+                <div id="AttachmentProductImage" data-appname="@SiteURLs.NPDSITEURL">
+                </div>
+                @Html.TextBoxFor(m => m.ProductImage, new { @class = "notvisible form-control" })
+            </div>
+        </div>
+    </div>
+</div>

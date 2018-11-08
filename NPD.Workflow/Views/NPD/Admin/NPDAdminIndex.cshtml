@@ -1,0 +1,101 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.CommonDataContract
+@using NPD.Workflow.Models.Common
+@model  IContract
+@{
+    NPDContract contract = Model as NPDContract;
+    NPDAdminForm form = contract.Forms.FirstOrDefault() as NPDAdminForm;
+    ViewBag.Title = "New Product Development";
+    NPDAdminDetailSection npdAdminDetailSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDADMINSECTION)) as NPDAdminDetailSection;
+
+    
+    string sectionActiveCss = string.Empty;
+    if (npdAdminDetailSection.Status.ToLower().Equals("draft") ||  npdAdminDetailSection.Status.ToLower().Equals("completed") || npdAdminDetailSection.Status.ToLower().Equals("rejected"))
+    {
+        sectionActiveCss = "disabled";
+    }
+
+}
+
+@if (form != null)
+{
+    @section buttons{
+    @Html.Partial("_ButtonGroup", form.Buttons)
+    }
+
+    if (!string.IsNullOrEmpty(form.FormStatus))
+    {
+        <div class="card-body text-right pad-bot-15">
+            <div class="label label-primary">
+                @form.FormStatus
+            </div>
+        </div>
+    }
+
+
+    <div id="divNPDForm">
+        <div id="tab-general">
+            <div class="row mbl">
+                <div class="col-lg-12">
+                    <div class="tab-content responsive @sectionActiveCss" id="generalTabContent">
+                        @if (npdAdminDetailSection != null)
+                        {
+
+                            <div class="card">
+                                <div class="card-head" data-toggle="collapse" data-target="#sectiondetails1">
+                                    @Html.ResourceValue("Section_Title_NPDDetailDocumentSection", ResourceNames.NPD)
+                                    <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                </div>
+                                <div class="card-body" id="sectiondetails1">
+                                    <div class="form-horizontal">
+                                        <p><span class="text-danger text-default-light">@Html.ResourceValue("Text_Mandatory", ResourceNames.Common)</span></p>
+                                        @Html.Partial("Admin/_npdAdminDetailSection", npdAdminDetailSection)
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        }
+
+
+
+                        @{ApplicationStatusSection appStatus = form.SectionsList.FirstOrDefault(f => f != null && f.SectionName.Equals(SectionNameConstant.APPLICATIONSTATUS)) as ApplicationStatusSection;
+
+                        if (appStatus != null)
+                        {
+                            @Html.Partial("_ApplicationStatus", appStatus)
+                        }
+
+                        ActivityLogSection activityLog = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.ACTIVITYLOG)) as ActivityLogSection;
+                        if (activityLog != null)
+                        {
+                            @Html.Partial("_ActivityLogs", activityLog, new ViewDataDictionary { { "Resources", ResourceNames.NPD } })
+                        }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-top-wrapper ">
+            <i class="fa fa-chevron-up">
+            </i>
+        </div>
+       
+
+    </div>
+       
+    <div id="divAddProductFeature"></div>
+    <div id="divAddProductCompetitor"></div>
+    <div id="divAddCumulativeSalesProjection"></div>
+    <div id="divAddTargetRLP"></div>
+
+
+    @section scripts{
+        @Scripts.Render("~/bundles/npdindex")
+        @Scripts.Render("~/bundles/npdheartbeat")
+    }
+}
+
+

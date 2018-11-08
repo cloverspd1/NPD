@@ -1,0 +1,618 @@
+2018-09-06 10:07:54,106 [10] INFO  - MVC - Application_Start_Done, 
+2018-09-06 10:07:54,126 [11] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-09-06 10:07:57,863 [11] INFO  - MVC - Second, 
+2018-09-06 10:07:57,867 [10] INFO  - MVC - Start NPD form and ID = 0, 
+2018-09-06 10:08:01,539 [10] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-09-06 10:08:01,539 [11] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 10:08:01,539 [15] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-09-06 10:08:05,130 [10] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-09-06 10:08:05,130 [11] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-09-06 10:08:29,354 [10] INFO  - WCF - called Helper.GetFormData, 
+2018-09-06 10:08:31,614 [15] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 10:08:31,614 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 10:08:31,614 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 10:08:31,614 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 10:08:31,618 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-09-06 10:08:31,622 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-06 10:08:31,622 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-09-06 10:08:31,626 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-09-06 10:08:31,618 [10] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-06 10:08:31,626 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-09-06 10:08:31,622 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-06 10:08:31,626 [10] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 10:08:31,626 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-09-06 10:08:31,634 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 10:08:31,634 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 2"
+2018-09-06 10:08:31,630 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 10:08:31,634 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=23
+2018-09-06 10:08:31,638 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=24
+2018-09-06 10:08:31,630 [10] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 10:08:31,638 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-09-06 10:08:31,642 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-09-06 10:08:31,646 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-09-06 10:08:31,642 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-06 10:08:31,642 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-09-06 10:08:38,477 [10] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-06 10:08:38,477 [12] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-06 10:08:47,812 [10] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-09-06 10:09:00,532 [9] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/9f8af7292c064223863c66fa67d74077?version=2, 
+2018-09-06 10:14:02,586 [12] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 10:14:02,586 [18] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 10:35:32,453 [12] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 10:35:32,454 [18] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 10:40:37,548 [33] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 10:40:37,548 [35] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 10:45:48,406 [40] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 10:45:48,406 [41] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 10:50:58,096 [53] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 10:50:58,096 [63] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 10:56:01,165 [22] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 10:56:01,165 [43] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 11:01:03,927 [22] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 11:01:03,927 [80] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 12:56:21,692 [81] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 12:56:21,719 [75] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 12:56:36,648 [77] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 12:56:36,684 [77] INFO  - MVC - Second, 
+2018-09-06 12:56:36,684 [69] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 12:56:36,684 [73] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 12:56:41,483 [75] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 12:56:41,494 [75] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 12:56:42,772 [77] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 12:56:42,788 [69] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 12:56:44,695 [75] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/4bb01e0c4bf441db867de0695de2b4c8?version=2, 
+2018-09-06 12:58:00,558 [77] INFO  - MVC - Second, 
+2018-09-06 12:58:00,559 [64] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 12:58:08,812 [77] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 12:58:38,756 [70] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 12:58:40,065 [75] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 12:58:40,077 [75] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 12:58:50,495 [77] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 12:59:01,245 [71] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 12:59:01,681 [70] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/793fd650092f4b7e84903066143c61df?version=2, 
+2018-09-06 12:59:12,210 [71] INFO  - MVC - Second, 
+2018-09-06 12:59:12,211 [68] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 12:59:13,252 [77] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 13:00:05,969 [69] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 13:02:31,606 [75] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 13:02:31,611 [75] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 13:02:33,780 [69] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 13:02:33,792 [75] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 13:02:34,388 [69] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/0871e8e6e8854c9e80916599a6b5dd4f?version=2, 
+2018-09-06 13:02:41,938 [69] INFO  - MVC - Second, 
+2018-09-06 13:02:41,939 [75] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 13:02:42,041 [65] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 13:02:42,041 [69] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 13:06:32,681 [62] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 13:06:32,686 [62] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 13:06:34,059 [62] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 13:06:34,079 [44] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 13:06:34,514 [62] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/48be97c9b5324618a8e809cb907a0d24?version=2, 
+2018-09-06 14:08:08,212 [53] INFO  - MVC - Application_Start_Done, 
+2018-09-06 14:08:08,236 [53] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-09-06 14:08:08,255 [53] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 14:08:08,337 [53] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 14:08:17,266 [53] INFO  - MVC - Second, 
+2018-09-06 14:08:24,182 [53] INFO  - MVC - Second, 
+2018-09-06 14:08:26,459 [53] INFO  - MVC - Second, 
+2018-09-06 14:08:28,481 [52] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 14:08:28,482 [59] INFO  - MVC - Start NPD form and ID = 0, 
+2018-09-06 14:08:29,051 [54] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 14:09:19,291 [55] ERROR - Id: cbe02324-9fce-4b83-8a8a-c95c259f948c
+2018-09-06 14:09:19,293 [55] ERROR - StatusCode: 200
+2018-09-06 14:09:19,294 [55] ERROR - Controller: 
+2018-09-06 14:09:19,295 [55] ERROR - Action: 
+2018-09-06 14:09:19,292 [57] ERROR - Id: a382b7d1-b6b9-441a-867e-28fb8945817f
+2018-09-06 14:09:19,291 [41] ERROR - Id: 78c6c86d-3938-4073-85ae-23bdd4f8f67f
+2018-09-06 14:09:19,304 [41] ERROR - StatusCode: 200
+2018-09-06 14:09:19,305 [41] ERROR - Controller: 
+2018-09-06 14:09:19,307 [41] ERROR - Action: 
+2018-09-06 14:09:19,308 [41] ERROR - Unable to connect to the remote server
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 13.107.136.9:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetIdcrlHeader(Uri url, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 743
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer..ctor() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 49
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.<>c.<.cctor>b__16_0() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 19
+   at System.Lazy`1.CreateValue()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.get_Instance() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 21
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-09-06 14:09:19,301 [55] ERROR - Unable to connect to the remote server
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 13.107.136.9:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetIdcrlHeader(Uri url, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 743
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer..ctor() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 49
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.<>c.<.cctor>b__16_0() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 19
+   at System.Lazy`1.CreateValue()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.get_Instance() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 21
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-09-06 14:09:19,303 [57] ERROR - StatusCode: 200
+2018-09-06 14:09:19,439 [57] ERROR - Controller: 
+2018-09-06 14:09:19,441 [57] ERROR - Action: 
+2018-09-06 14:09:19,443 [57] ERROR - Unable to connect to the remote server
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 13.107.136.9:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetIdcrlHeader(Uri url, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 743
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer..ctor() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 49
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.<>c.<.cctor>b__16_0() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 19
+   at System.Lazy`1.CreateValue()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.get_Instance() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 21
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-09-06 14:09:25,947 [52] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/204c4c7dc2474ee993b515f07780fd2b?version=2, 
+2018-09-06 14:10:10,326 [55] INFO  - MVC - Application_Start_Done, 
+2018-09-06 14:10:10,340 [58] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-09-06 14:10:12,787 [55] INFO  - MVC - Second, 
+2018-09-06 14:10:13,808 [55] INFO  - MVC - Start NPD form and ID = 0, 
+2018-09-06 14:10:17,020 [55] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-09-06 14:10:17,020 [54] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 14:10:17,020 [58] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-09-06 14:10:21,441 [55] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-09-06 14:10:21,455 [58] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-09-06 14:10:38,463 [54] INFO  - WCF - called Helper.GetFormData, 
+2018-09-06 14:10:39,919 [58] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 14:10:39,920 [54] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 14:10:39,927 [46] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-09-06 14:10:39,923 [42] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 14:10:39,919 [45] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-09-06 14:10:39,933 [42] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 14:10:39,922 [55] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 14:10:39,922 [58] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 14:10:39,927 [54] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 14:10:39,927 [40] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 14:10:39,928 [46] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 14:10:39,945 [40] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 14:10:39,944 [54] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 14:10:39,936 [45] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 14:10:39,953 [45] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-09-06 14:10:39,938 [42] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 14:10:39,957 [42] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-09-06 14:10:39,939 [55] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 14:10:39,942 [58] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-09-06 14:10:39,958 [42] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-09-06 14:10:39,946 [46] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-09-06 14:10:39,949 [40] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-09-06 14:10:39,952 [54] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-09-06 14:10:39,955 [45] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-09-06 14:10:44,656 [46] INFO  - WCF - Helper.GetAllButtons, 
+2018-09-06 14:10:44,656 [45] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-09-06 14:10:54,046 [55] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-09-06 14:11:05,161 [42] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/eb0b25984b934b54b7e49746be76416c?version=2, 
+2018-09-06 14:11:20,472 [38] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 14:11:20,472 [42] INFO  - MVC - Second, 
+2018-09-06 14:11:22,021 [42] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 14:12:14,036 [45] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 14:15:26,693 [58] ERROR - The Push Notifications feature is not activated on the site 'https://bajajelect.sharepoint.com/sites/BELNPDDev'
+Microsoft.SharePoint.Client.ServerException: The Push Notifications feature is not activated on the site 'https://bajajelect.sharepoint.com/sites/BELNPDDev'
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.EnsureUser(ClientContext context, Web web, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 285
+2018-09-06 14:15:27,242 [45] INFO  - WCF - Error while resolve : 6, 
+2018-09-06 14:18:44,713 [45] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 14:18:45,138 [11] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 14:18:46,064 [58] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 14:18:46,065 [58] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 14:18:46,962 [15] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 14:18:46,978 [93] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 14:18:50,052 [11] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/633f41e1af5b4a6989b33135b13fac30?version=2, 
+2018-09-06 15:06:51,873 [76] INFO  - MVC - Second, 
+2018-09-06 15:06:51,874 [86] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-09-06 15:06:51,983 [76] INFO  - MVC - Start NPD form and ID = 0, 
+2018-09-06 15:06:51,983 [85] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-09-06 15:06:51,983 [84] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 15:06:51,983 [81] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-09-06 15:06:58,312 [86] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-09-06 15:06:58,336 [86] INFO  - WCF - called Helper.GetFormData, 
+2018-09-06 15:06:58,357 [81] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-09-06 15:06:59,875 [84] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/648b6e670ca54bbc8574c0479b94c336?version=2, 
+2018-09-06 15:07:10,335 [76] INFO  - MVC - Second, 
+2018-09-06 15:07:10,336 [84] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 15:07:12,234 [81] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 15:07:12,234 [76] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 15:07:14,590 [74] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 15:07:14,591 [74] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 15:07:15,611 [74] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 15:07:15,625 [76] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 15:07:43,034 [76] INFO  - MVC - Second, 
+2018-09-06 15:07:43,034 [84] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-09-06 15:07:43,143 [76] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-09-06 15:07:43,143 [88] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-09-06 15:07:43,143 [81] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 15:07:43,143 [78] INFO  - MVC - Start NPD form and ID = 0, 
+2018-09-06 15:07:47,656 [88] INFO  - WCF - called Helper.GetFormData, 
+2018-09-06 15:07:47,656 [80] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-09-06 15:07:47,672 [79] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-09-06 15:07:49,048 [74] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/1f799f63e8534798986b35113d58d29c?version=2, 
+2018-09-06 15:07:55,143 [84] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/f43fb30a0f8948cda756337fb93adf30?version=2, 
+2018-09-06 15:08:04,712 [78] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 15:08:04,712 [88] INFO  - MVC - Second, 
+2018-09-06 15:08:05,608 [79] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 15:08:05,608 [80] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 15:08:08,878 [74] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 15:08:08,879 [74] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 15:08:09,874 [88] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 15:08:09,874 [81] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 15:08:14,406 [88] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/f67564db86174de78b3e4178ece7e48e?version=2, 
+2018-09-06 15:08:24,000 [84] INFO  - MVC - Second, 
+2018-09-06 15:08:24,001 [76] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 15:08:25,153 [74] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 15:08:54,077 [74] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 15:09:22,448 [81] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 15:09:23,005 [81] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 15:09:30,488 [73] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 15:09:30,488 [43] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 15:09:33,376 [73] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/1b6b61d394314253a455df28c3459371?version=2, 
+2018-09-06 15:09:42,862 [84] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 15:09:42,862 [76] INFO  - MVC - Second, 
+2018-09-06 15:09:46,422 [84] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 15:09:46,422 [64] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 15:09:52,738 [74] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 15:09:52,739 [74] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 15:09:53,498 [74] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 15:09:53,516 [73] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 15:09:54,126 [84] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/921671518ca24621a37b95c9493c6833?version=2, 
+2018-09-06 15:12:03,885 [71] INFO  - MVC - Second, 
+2018-09-06 15:12:03,891 [71] INFO  - MVC - Begin Request http://localhost:51079/?ID=85, 
+2018-09-06 15:12:04,864 [71] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 15:12:04,864 [67] INFO  - MVC - Start NPD form and ID = 85, 
+2018-09-06 15:12:17,513 [84] ERROR - No Role Found for Item ID : 85 User ID : 6; If User Inside the group then also this error comes.
+2018-09-06 15:12:18,137 [84] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-09-06 15:14:26,646 [71] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-09-06 15:14:26,653 [84] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-09-06 15:14:27,305 [84] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/c9613aa86d9c407b9f27834be968fdc9?version=2, 
+2018-09-06 15:18:59,076 [44] INFO  - MVC - Second, 
+2018-09-06 15:18:59,077 [39] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-09-06 15:18:59,188 [63] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-09-06 15:18:59,189 [63] INFO  - MVC - Start NPD form and ID = 0, 
+2018-09-06 15:18:59,188 [39] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-09-06 15:18:59,188 [44] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-09-06 15:19:04,671 [39] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-09-06 15:19:04,672 [63] INFO  - WCF - called Helper.GetFormData, 
+2018-09-06 15:19:04,706 [44] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-09-06 15:19:05,453 [44] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/aaa9cc0cf6d84d5589782ebc295aff75?version=2, 
+2018-09-06 15:41:20,926 [66] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-09-06 15:41:20,926 [63] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 15:46:21,467 [78] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-09-06 15:46:21,567 [79] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 

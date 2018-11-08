@@ -1,0 +1,1377 @@
+2018-08-31 10:40:20,728 [7] INFO  - MVC - Application_Start_Done, 
+2018-08-31 10:40:20,767 [8] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 10:40:25,383 [8] INFO  - MVC - Second, 
+2018-08-31 10:40:25,385 [7] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 10:40:41,941 [6] ERROR - Id: 3d1d8cf0-8510-4b7a-ab9b-16ec18adb1b6
+2018-08-31 10:40:41,942 [6] ERROR - StatusCode: 200
+2018-08-31 10:40:41,943 [6] ERROR - Controller: 
+2018-08-31 10:40:41,944 [6] ERROR - Action: 
+2018-08-31 10:40:41,945 [6] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 743
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer..ctor() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 49
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.<>c.<.cctor>b__16_0() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 19
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.get_Instance() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 21
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 10:40:48,417 [6] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/ce76c47591f440b3922559a642b56a8f?version=2, 
+2018-08-31 10:49:20,169 [15] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 10:50:39,089 [19] INFO  - MVC - Second, 
+2018-08-31 10:50:39,090 [16] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 10:50:39,089 [14] ERROR - Id: 50bf816b-5a02-406a-8e6c-c24960ac74a4
+2018-08-31 10:50:39,106 [14] ERROR - StatusCode: 200
+2018-08-31 10:50:39,107 [14] ERROR - Controller: 
+2018-08-31 10:50:39,109 [14] ERROR - Action: 
+2018-08-31 10:50:39,110 [14] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 743
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer..ctor() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 49
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.<>c.<.cctor>b__16_0() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 19
+   at System.Lazy`1.CreateValue()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.get_Value()
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.get_Instance() in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 21
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 10:51:32,678 [15] INFO  - MVC - Application_Start_Done, 
+2018-08-31 10:51:32,695 [16] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 10:51:35,000 [15] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 10:51:35,001 [16] INFO  - MVC - Second, 
+2018-08-31 10:51:40,728 [16] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 10:51:40,728 [15] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 10:51:40,728 [21] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 10:51:46,569 [15] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 10:51:46,587 [16] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-31 10:52:06,194 [24] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 11:18:56,116 [14] ERROR - Id: ddc8982d-fb30-44f3-b4db-f481163ff660
+2018-08-31 11:18:56,120 [14] ERROR - StatusCode: 200
+2018-08-31 11:18:56,130 [14] ERROR - Controller: 
+2018-08-31 11:18:56,145 [14] ERROR - Action: 
+2018-08-31 11:18:56,153 [14] ERROR - The property or field has not been initialized. It has not been requested or the request has not been executed. It may need to be explicitly requested.
+Microsoft.SharePoint.Client.PropertyOrFieldNotInitializedException: The property or field has not been initialized. It has not been requested or the request has not been executed. It may need to be explicitly requested.
+   at Microsoft.SharePoint.Client.ListItem.GetFieldValue(String fieldName)
+   at Microsoft.SharePoint.Client.ListItem.get_Item(String fieldName)
+   at NPD.DataAccessLayer.MasterDataHelper.AssignPropertyValues(Object objMaster, ClientContext context, Web web, ListItemCollection items, Type itemType) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 183
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute6[T0,T1,T2,T3,T4,T5,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterDataOf(ClientContext context, Web web, IMaster master) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 93
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterData(ClientContext context, Web web, List`1 masters) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 52
+   at NPD.DataAccessLayer.BELDataAccessLayer.FillSectionFromList(ClientContext context, Web web, String applicationName, String formName, String role, Object actualSection, String userID, Dictionary`2 otherParamDictionary, List`1& approverMatrixFromList) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 3057
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetData(ClientContext context, Web web, String applicationName, String formName, String role, ISection section, Boolean isActive, String userID, List`1& approverMatrixFromList, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2797
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form, String role, Dictionary`2 activeAndHiddenSections, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2717
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2413
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 70
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 11:19:37,163 [21] INFO  - MVC - Application_Start_Done, 
+2018-08-31 11:19:37,163 [15] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 11:19:40,284 [15] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 11:19:40,284 [21] INFO  - MVC - Second, 
+2018-08-31 11:19:45,265 [15] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 11:19:45,265 [24] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 11:19:45,265 [21] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 11:19:50,281 [15] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 11:19:50,301 [21] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-31 11:20:08,016 [13] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 11:20:08,904 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 2"
+2018-08-31 11:20:08,904 [24] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-31 11:20:08,907 [24] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 11:20:08,909 [24] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 11:20:08,908 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=24
+2018-08-31 11:20:08,911 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 11:20:08,910 [24] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 11:20:08,907 [15] INFO  - WCF - Helper.GetNameFromPersonField, Int32=23
+2018-08-31 11:20:08,920 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:20:08,920 [24] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:20:08,923 [24] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-08-31 11:20:08,925 [24] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-08-31 11:20:08,926 [24] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-08-31 11:20:08,920 [15] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:20:08,921 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:20:08,930 [15] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 11:20:08,928 [24] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-08-31 11:20:08,931 [15] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 11:20:08,930 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 11:20:08,933 [24] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 11:20:08,936 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:20:08,937 [24] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:20:08,938 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:20:08,935 [15] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:21:05,038 [14] ERROR - Id: 7e343e0c-8806-4a09-b292-31a00840b758
+2018-08-31 11:21:05,039 [14] ERROR - StatusCode: 200
+2018-08-31 11:21:05,041 [14] ERROR - Controller: 
+2018-08-31 11:21:05,052 [14] ERROR - Action: 
+2018-08-31 11:21:05,053 [14] ERROR - The property or field has not been initialized. It has not been requested or the request has not been executed. It may need to be explicitly requested.
+Microsoft.SharePoint.Client.PropertyOrFieldNotInitializedException: The property or field has not been initialized. It has not been requested or the request has not been executed. It may need to be explicitly requested.
+   at Microsoft.SharePoint.Client.ListItem.GetFieldValue(String fieldName)
+   at Microsoft.SharePoint.Client.ListItem.get_Item(String fieldName)
+   at NPD.DataAccessLayer.MasterDataHelper.AssignPropertyValues(Object objMaster, ClientContext context, Web web, ListItemCollection items, Type itemType) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 205
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute6[T0,T1,T2,T3,T4,T5,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+   at CallSite.Target(Closure , CallSite , MasterDataHelper , Object , ClientContext , Web , ListItemCollection , Type )
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterDataOf(ClientContext context, Web web, IMaster master) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 93
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterData(ClientContext context, Web web, List`1 masters) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 52
+   at NPD.DataAccessLayer.BELDataAccessLayer.FillSectionFromList(ClientContext context, Web web, String applicationName, String formName, String role, Object actualSection, String userID, Dictionary`2 otherParamDictionary, List`1& approverMatrixFromList) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 3057
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetData(ClientContext context, Web web, String applicationName, String formName, String role, ISection section, Boolean isActive, String userID, List`1& approverMatrixFromList, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2797
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form, String role, Dictionary`2 activeAndHiddenSections, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2717
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2413
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 70
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 11:21:10,159 [14] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/279386a54a6e4ab4a628ad48a83de8ff?version=2, 
+2018-08-31 11:37:55,081 [29] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 11:37:55,073 [23] INFO  - MVC - Application_Start_Done, 
+2018-08-31 11:38:00,807 [23] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 11:38:00,807 [35] INFO  - MVC - Second, 
+2018-08-31 11:38:05,874 [29] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 11:38:05,874 [35] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 11:38:05,874 [23] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 11:38:10,750 [23] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 11:38:10,766 [29] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-31 11:38:28,812 [35] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 11:38:29,905 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-31 11:38:29,905 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 11:38:29,907 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=24
+2018-08-31 11:38:29,907 [29] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 11:38:29,908 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 11:38:29,907 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 11:38:29,919 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:38:29,919 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:38:29,920 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-08-31 11:38:29,921 [23] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-08-31 11:38:29,919 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:38:29,926 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-08-31 11:38:29,919 [29] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:38:29,927 [29] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 11:38:29,924 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-08-31 11:38:29,926 [35] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 11:38:29,928 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 11:38:29,930 [23] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 11:38:29,931 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:38:29,935 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:38:29,934 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:38:29,933 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:38:29,937 [23] INFO  - WCF - Helper.GetNameFromPersonField, Int32=23
+2018-08-31 11:38:29,936 [35] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 2"
+2018-08-31 11:43:41,272 [13] ERROR - Id: 1ca5b22c-e161-4bd1-beb6-16819de0e9e0
+2018-08-31 11:43:41,275 [13] ERROR - StatusCode: 200
+2018-08-31 11:43:41,325 [13] ERROR - Controller: 
+2018-08-31 11:43:41,327 [13] ERROR - Action: 
+2018-08-31 11:43:41,328 [13] ERROR - List 'TestSampleTypesMaster' does not exist at site with URL 'https://bajajelect.sharepoint.com/sites/BELNPDDev'.
+Microsoft.SharePoint.Client.ServerException: List 'TestSampleTypesMaster' does not exist at site with URL 'https://bajajelect.sharepoint.com/sites/BELNPDDev'.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterDataOf(ClientContext context, Web web, IMaster master) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 92
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterData(ClientContext context, Web web, List`1 masters) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 52
+   at NPD.DataAccessLayer.BELDataAccessLayer.FillSectionFromList(ClientContext context, Web web, String applicationName, String formName, String role, Object actualSection, String userID, Dictionary`2 otherParamDictionary, List`1& approverMatrixFromList) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 3057
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetData(ClientContext context, Web web, String applicationName, String formName, String role, ISection section, Boolean isActive, String userID, List`1& approverMatrixFromList, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2797
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form, String role, Dictionary`2 activeAndHiddenSections, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2717
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2413
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 70
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 11:43:47,357 [6] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/750827fd4dd34861a3539fe2883ebfa4?version=2, 
+2018-08-31 11:44:11,223 [23] INFO  - MVC - Application_Start_Done, 
+2018-08-31 11:44:11,234 [6] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 11:44:15,685 [23] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 11:44:15,685 [29] INFO  - MVC - Second, 
+2018-08-31 11:44:19,141 [6] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 11:44:19,141 [23] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 11:44:19,142 [36] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 11:44:24,028 [23] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 11:44:24,044 [29] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-31 11:44:45,784 [36] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 11:44:46,535 [36] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:44:46,536 [36] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-08-31 11:44:46,537 [29] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:44:46,539 [29] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-08-31 11:44:46,536 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:44:46,537 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:44:46,540 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 11:44:46,541 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 11:44:46,537 [36] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-08-31 11:44:46,538 [23] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-08-31 11:44:46,542 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 11:44:46,540 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 11:44:46,549 [29] INFO  - WCF - Helper.GetNameFromPersonField, Int32=23
+2018-08-31 11:44:46,543 [35] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:44:46,551 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-31 11:44:46,553 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=24
+2018-08-31 11:44:46,544 [36] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:44:46,547 [23] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:44:46,547 [24] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:44:46,548 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 2"
+2018-08-31 11:44:46,554 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 11:44:46,555 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 11:44:46,557 [23] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 11:44:46,556 [36] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 11:46:39,590 [13] ERROR - Id: 9c15edb6-c677-4387-b557-f7b3dff74683
+2018-08-31 11:46:39,591 [13] ERROR - StatusCode: 200
+2018-08-31 11:46:39,592 [13] ERROR - Controller: 
+2018-08-31 11:46:39,593 [13] ERROR - Action: 
+2018-08-31 11:46:39,595 [13] ERROR - List 'DriverTypeMaster' does not exist at site with URL 'https://bajajelect.sharepoint.com/sites/BELNPDDev'.
+Microsoft.SharePoint.Client.ServerException: List 'DriverTypeMaster' does not exist at site with URL 'https://bajajelect.sharepoint.com/sites/BELNPDDev'.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterDataOf(ClientContext context, Web web, IMaster master) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 92
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterData(ClientContext context, Web web, List`1 masters) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 52
+   at NPD.DataAccessLayer.BELDataAccessLayer.FillSectionFromList(ClientContext context, Web web, String applicationName, String formName, String role, Object actualSection, String userID, Dictionary`2 otherParamDictionary, List`1& approverMatrixFromList) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 3057
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetData(ClientContext context, Web web, String applicationName, String formName, String role, ISection section, Boolean isActive, String userID, List`1& approverMatrixFromList, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2797
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form, String role, Dictionary`2 activeAndHiddenSections, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2717
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2413
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 70
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 11:46:45,156 [29] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/013dd1f9d26049c19bf76854c6d0c929?version=2, 
+2018-08-31 11:47:08,611 [23] INFO  - MVC - Application_Start_Done, 
+2018-08-31 11:47:08,625 [33] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 11:47:10,883 [23] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 11:47:10,883 [33] INFO  - MVC - Second, 
+2018-08-31 11:47:16,281 [29] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 11:47:16,281 [23] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 11:47:16,281 [33] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 11:47:20,122 [29] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 11:47:20,138 [23] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-31 11:47:36,144 [33] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 11:47:37,066 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:47:37,070 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=24
+2018-08-31 11:47:37,072 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 11:47:37,074 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 11:47:37,075 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 11:47:37,081 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 11:47:37,084 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:47:37,086 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:47:37,067 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 2"
+2018-08-31 11:47:37,068 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-31 11:47:37,069 [24] INFO  - WCF - Helper.GetNameFromPersonField, Int32=23
+2018-08-31 11:47:37,069 [33] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:47:37,096 [33] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-08-31 11:47:37,091 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:47:37,100 [23] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 11:47:37,105 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 11:47:37,113 [23] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 11:47:37,089 [9] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:47:37,095 [24] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-08-31 11:47:37,093 [29] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-08-31 11:47:37,124 [24] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 11:47:37,098 [33] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-08-31 11:47:37,120 [9] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 11:47:37,117 [23] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 11:48:53,571 [13] ERROR - Id: ebfb568f-d0ba-46a9-a5eb-9cbac3917fcd
+2018-08-31 11:48:53,572 [13] ERROR - StatusCode: 200
+2018-08-31 11:48:53,573 [13] ERROR - Controller: 
+2018-08-31 11:48:53,585 [13] ERROR - Action: 
+2018-08-31 11:48:53,586 [13] ERROR - List 'LightSourceMaster' does not exist at site with URL 'https://bajajelect.sharepoint.com/sites/BELNPDDev'.
+Microsoft.SharePoint.Client.ServerException: List 'LightSourceMaster' does not exist at site with URL 'https://bajajelect.sharepoint.com/sites/BELNPDDev'.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterDataOf(ClientContext context, Web web, IMaster master) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 92
+   at NPD.DataAccessLayer.MasterDataHelper.GetMasterData(ClientContext context, Web web, List`1 masters) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\MasterDataHelper.cs:line 52
+   at NPD.DataAccessLayer.BELDataAccessLayer.FillSectionFromList(ClientContext context, Web web, String applicationName, String formName, String role, Object actualSection, String userID, Dictionary`2 otherParamDictionary, List`1& approverMatrixFromList) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 3057
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , String , String , String , Object , String , Dictionary`2 , List`1& )
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetData(ClientContext context, Web web, String applicationName, String formName, String role, ISection section, Boolean isActive, String userID, List`1& approverMatrixFromList, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2797
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form, String role, Dictionary`2 activeAndHiddenSections, Dictionary`2 otherParamDictionary) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2717
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2413
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 70
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 11:48:58,436 [24] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/0ebb8d6d2375427eaa5d4e56ac766e19?version=2, 
+2018-08-31 11:49:10,938 [33] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 11:49:10,939 [33] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 11:49:10,940 [33] INFO  - MVC - Second, 
+2018-08-31 11:49:10,940 [33] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 11:49:10,938 [24] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 11:49:10,938 [32] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 11:49:17,169 [33] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 11:49:17,169 [24] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 11:49:17,969 [24] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-31 11:49:17,969 [32] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-31 11:49:29,674 [32] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-08-31 11:49:42,051 [32] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/a21e614886f7472198363363e34e8960?version=2, 
+2018-08-31 11:49:43,957 [24] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 11:49:43,957 [28] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 11:49:43,957 [27] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 11:49:43,957 [32] INFO  - MVC - Second, 
+2018-08-31 11:49:43,957 [6] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 11:49:43,957 [33] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 11:49:49,467 [6] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 11:49:49,482 [28] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 11:49:49,482 [27] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-08-31 11:49:51,190 [32] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/862e777926c0480eb57a2bc5bdfb96b0?version=2, 
+2018-08-31 11:54:55,255 [31] INFO  - MVC - Application_Start_Done, 
+2018-08-31 11:54:55,268 [10] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 11:54:55,329 [27] ERROR - 404 Error:
+2018-08-31 11:54:55,330 [27] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 11:59:55,672 [27] ERROR - 404 Error:
+2018-08-31 11:59:55,673 [27] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 11:59:55,779 [35] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 12:04:56,661 [35] ERROR - 404 Error:
+2018-08-31 12:04:56,662 [35] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 12:04:56,775 [31] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 12:09:57,646 [21] ERROR - 404 Error:
+2018-08-31 12:09:57,647 [21] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 12:09:57,753 [35] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 12:14:58,637 [17] ERROR - 404 Error:
+2018-08-31 12:14:58,638 [17] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 12:14:58,751 [31] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 12:19:59,636 [27] ERROR - 404 Error:
+2018-08-31 12:19:59,637 [27] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 12:19:59,743 [17] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 12:25:00,717 [31] ERROR - 404 Error:
+2018-08-31 12:25:00,719 [31] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 12:25:00,819 [27] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 12:30:01,631 [17] ERROR - 404 Error:
+2018-08-31 12:30:01,632 [17] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 12:30:01,738 [36] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 12:35:02,632 [36] ERROR - 404 Error:
+2018-08-31 12:35:02,633 [36] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+2018-08-31 12:35:02,738 [37] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 15:24:51,408 [11] INFO  - MVC - Application_Start_Done, 
+2018-08-31 15:24:51,425 [12] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 15:24:51,765 [13] INFO  - MVC - Second, 
+2018-08-31 15:28:35,063 [11] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 15:28:42,404 [13] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 15:28:42,404 [8] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 15:28:42,404 [12] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 15:28:47,057 [11] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 15:28:47,073 [12] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-31 15:29:09,186 [13] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 15:29:11,321 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 15:29:11,322 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 15:29:11,323 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 15:29:11,323 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 15:29:11,336 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 2"
+2018-08-31 15:29:11,341 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=23
+2018-08-31 15:29:11,344 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-31 15:29:11,349 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=24
+2018-08-31 15:29:11,354 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 15:29:11,358 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 15:29:11,364 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 15:29:11,369 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 15:29:11,373 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 15:29:11,377 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 15:29:11,381 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 15:29:11,385 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 15:29:11,390 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-08-31 15:29:11,394 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-08-31 15:29:11,399 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-08-31 15:29:11,403 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-08-31 15:29:11,407 [11] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 15:29:11,411 [12] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 15:29:11,415 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 15:29:11,419 [11] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 15:29:19,354 [13] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-31 15:29:19,354 [11] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-31 15:29:26,876 [11] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-08-31 15:29:39,810 [13] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/abfe03c43da34f4a9a7937e1a751bf90?version=2, 
+2018-08-31 15:34:29,056 [21] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveNPDDetailSection?Length=3Form Data: ["ListDetails[0].ItemId","ListDetails[0].ListName","SectionName","ActionStatus","Status","RequestViewer","RequestViewerName","CopyFrom","CurrentApprover.ApplicationName","CurrentApprover.ApprovalDate","CurrentApprover.ApproveBy","CurrentApprover.Approver","CurrentApprover.AssignDate","CurrentApprover.Comments","CurrentApprover.Days","CurrentApprover.Division","CurrentApprover.DueDate","CurrentApprover.FillByRole","CurrentApprover.FormName","CurrentApprover.HiddenSection","CurrentApprover.ID","CurrentApprover.IsAutoApproval","CurrentApprover.IsEscalate","CurrentApprover.IsReminder","CurrentApprover.Levels","CurrentApprover.RequestID","CurrentApprover.Role","CurrentApprover.SectionName","CurrentApprover.Status","CurrentApprover.SubDivision","CurrentApprover.Title","CurrentApprover.IsOptional","ProposedBy","ProposedByName","WorkflowStatus","ProjectNo","BusinessUnit","RequestDate","ProjectName","ProjectType","ProductCategory","ReferenceBrandAndModel","SampleRequired","CreatorAttachment","VendorName","VendorAddress","ApproversList[0].Role","ApproversList[0].Division","ApproversList[0].Approver","ApproversList[0].ApproverName","ApproversList[1].Role","ApproversList[1].Division","ApproversList[1].Approver","ApproversList[1].ApproverName","ApproversList[2].Role","ApproversList[2].Division","ApproversList[2].Approver","ApproversList[2].ApproverName","ApproversList[3].Role","ApproversList[3].Division","ApproversList[3].Approver","ApproversList[3].ApproverName","GenderList","Gender","IncomeGroupList","IncomeGroup","AgeGroupList","AgeGroup","ProjectTrigger","RegionsList","Regions","ChannelsList","Channels","OtherChannels","CurrentSKUs","PhasedOutSKUs","CurrentSales","AverageSales","mktPreviousYear1","mktCurrentYear1","mktNextYear1","mktPreviousYear2","mktCurrentYear2","mktNextYear2","ProductPositioning","IntendedLaunchDate","RequestorComments","TestSample","TotalNoOfIdenticalTestSample","ProductDescription","ProductImage","TypeOfLightSource","NoOfLampLED","LampLEDMake","LEDPartNumber","LEDBin","NominalCCT","NominalCRI","DriverType","DriverMake","DriverOutputVoltage","DriverNominalCRI","LEDConfiguration","LEDDrivingCurrent","PurposeOfTesting","TestSpecification","PhotometricComment","SpecificationSheet","TechnicalDataSheet","TestReportsAttachment","ButtonCaption","X-Requested-With"], 
+2018-08-31 15:34:41,083 [23] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddProductFeature?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:34:41,084 [19] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 15:34:41,084 [17] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 15:34:56,711 [28] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveProductFeature?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","ProductFeature","BajajBrand","ReferenceBrand","X-Requested-With"], 
+2018-08-31 15:34:56,746 [24] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetProductFeatureGrid?_=1535709578413, 
+2018-08-31 15:34:59,934 [24] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddProductFeature?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:35:18,633 [23] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveProductFeature?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","ProductFeature","BajajBrand","ReferenceBrand","X-Requested-With"], 
+2018-08-31 15:35:18,649 [27] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetProductFeatureGrid?_=1535709578414, 
+2018-08-31 15:35:24,418 [27] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddProductCompetitor?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:35:52,917 [29] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveProductCompetitor?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Brand","SalesValue","MarketShare","SalesVolume","RLP","X-Requested-With"], 
+2018-08-31 15:35:52,954 [30] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetProductCompetitorGrid?_=1535709578415, 
+2018-08-31 15:35:59,664 [29] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:36:09,930 [29] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 15:36:09,961 [30] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535709578416, 
+2018-08-31 15:36:15,978 [28] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveNPDDetailSection?Length=3Form Data: ["ListDetails[0].ItemId","ListDetails[0].ListName","SectionName","ActionStatus","Status","RequestViewer","RequestViewerName","CopyFrom","CurrentApprover.ApplicationName","CurrentApprover.ApprovalDate","CurrentApprover.ApproveBy","CurrentApprover.Approver","CurrentApprover.AssignDate","CurrentApprover.Comments","CurrentApprover.Days","CurrentApprover.Division","CurrentApprover.DueDate","CurrentApprover.FillByRole","CurrentApprover.FormName","CurrentApprover.HiddenSection","CurrentApprover.ID","CurrentApprover.IsAutoApproval","CurrentApprover.IsEscalate","CurrentApprover.IsReminder","CurrentApprover.Levels","CurrentApprover.RequestID","CurrentApprover.Role","CurrentApprover.SectionName","CurrentApprover.Status","CurrentApprover.SubDivision","CurrentApprover.Title","CurrentApprover.IsOptional","ProposedBy","ProposedByName","WorkflowStatus","ProjectNo","BusinessUnit","RequestDate","ProjectName","ProjectType","ProductCategory","ReferenceBrandAndModel","SampleRequired","CreatorAttachment","VendorName","VendorAddress","ApproversList[0].Role","ApproversList[0].Division","ApproversList[0].Approver","ApproversList[0].ApproverName","ApproversList[1].Role","ApproversList[1].Division","ApproversList[1].Approver","ApproversList[1].ApproverName","ApproversList[2].Role","ApproversList[2].Division","ApproversList[2].Approver","ApproversList[2].ApproverName","ApproversList[3].Role","ApproversList[3].Division","ApproversList[3].Approver","ApproversList[3].ApproverName","GenderList","Gender","IncomeGroupList","IncomeGroup","AgeGroupList","AgeGroup","ProjectTrigger","RegionsList","Regions","ChannelsList","Channels","OtherChannels","CurrentSKUs","PhasedOutSKUs","CurrentSales","AverageSales","mktPreviousYear1","mktCurrentYear1","mktNextYear1","mktPreviousYear2","mktCurrentYear2","mktNextYear2","ProductPositioning","IntendedLaunchDate","RequestorComments","TestSample","TotalNoOfIdenticalTestSample","ProductDescription","ProductImage","TypeOfLightSource","NoOfLampLED","LampLEDMake","LEDPartNumber","LEDBin","NominalCCT","NominalCRI","DriverType","DriverMake","DriverOutputVoltage","DriverNominalCRI","LEDConfiguration","LEDDrivingCurrent","PurposeOfTesting","TestSpecification","PhotometricComment","SpecificationSheet","TechnicalDataSheet","TestReportsAttachment","ButtonCaption","X-Requested-With"], 
+2018-08-31 15:36:20,993 [28] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:36:32,262 [28] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 15:36:32,280 [29] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535709578417, 
+2018-08-31 15:36:35,962 [32] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:36:46,715 [27] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535709578418, 
+2018-08-31 15:36:46,715 [32] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 15:38:46,977 [27] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveNPDDetailSection?Length=3Form Data: ["ListDetails[0].ItemId","ListDetails[0].ListName","SectionName","ActionStatus","Status","RequestViewer","RequestViewerName","CopyFrom","CurrentApprover.ApplicationName","CurrentApprover.ApprovalDate","CurrentApprover.ApproveBy","CurrentApprover.Approver","CurrentApprover.AssignDate","CurrentApprover.Comments","CurrentApprover.Days","CurrentApprover.Division","CurrentApprover.DueDate","CurrentApprover.FillByRole","CurrentApprover.FormName","CurrentApprover.HiddenSection","CurrentApprover.ID","CurrentApprover.IsAutoApproval","CurrentApprover.IsEscalate","CurrentApprover.IsReminder","CurrentApprover.Levels","CurrentApprover.RequestID","CurrentApprover.Role","CurrentApprover.SectionName","CurrentApprover.Status","CurrentApprover.SubDivision","CurrentApprover.Title","CurrentApprover.IsOptional","ProposedBy","ProposedByName","WorkflowStatus","ProjectNo","BusinessUnit","RequestDate","ProjectName","ProjectType","ProductCategory","ReferenceBrandAndModel","SampleRequired","CreatorAttachment","VendorName","VendorAddress","ApproversList[0].Role","ApproversList[0].Division","ApproversList[0].Approver","ApproversList[0].ApproverName","ApproversList[1].Role","ApproversList[1].Division","ApproversList[1].Approver","ApproversList[1].ApproverName","ApproversList[2].Role","ApproversList[2].Division","ApproversList[2].Approver","ApproversList[2].ApproverName","ApproversList[3].Role","ApproversList[3].Division","ApproversList[3].Approver","ApproversList[3].ApproverName","GenderList","Gender","IncomeGroupList","IncomeGroup","AgeGroupList","AgeGroup","ProjectTrigger","RegionsList","Regions","ChannelsList","Channels","OtherChannels","CurrentSKUs","PhasedOutSKUs","CurrentSales","AverageSales","mktPreviousYear1","mktCurrentYear1","mktNextYear1","mktPreviousYear2","mktCurrentYear2","mktNextYear2","ProductPositioning","IntendedLaunchDate","RequestorComments","TestSample","TotalNoOfIdenticalTestSample","ProductDescription","ProductImage","TypeOfLightSource","NoOfLampLED","LampLEDMake","LEDPartNumber","LEDBin","NominalCCT","NominalCRI","DriverType","DriverMake","DriverOutputVoltage","DriverNominalCRI","LEDConfiguration","LEDDrivingCurrent","PurposeOfTesting","TestSpecification","PhotometricComment","SpecificationSheet","TechnicalDataSheet","TestReportsAttachment","ButtonCaption","X-Requested-With"], 
+2018-08-31 15:39:36,452 [30] ERROR - Unable to connect to the remote server
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 13.107.136.9:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDNo(String businessunit) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 314
+2018-08-31 15:39:39,944 [27] INFO  - WCF - helper.SaveData, Dictionary`2={"UserID":"6","ActionPer":" Submit|NextApproval","ActivityLog":"NPDActivityLog","ApplicationName":"NPD","FormName":"NPD Form","IsNewItem":"True"}
+2018-08-31 15:39:42,072 [38] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="25"
+2018-08-31 15:39:42,072 [27] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 15:39:43,002 [38] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 15:39:43,002 [27] INFO  - WCF - Saving Actual Section Properties, 
+2018-08-31 15:39:45,858 [38] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 15:39:52,749 [37] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 15:40:00,946 [30] ERROR - Error While SaveData - List Name:,List ItemID:0 Message:Column 'CopyFrom' does not exist. It may have been deleted by another user.  /sites/BELNPDDev/Lists/NPD, StackTrace:    at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.SaveDataInList(ClientContext context, Web web, Object actualSection, ListItem item, String listName, Dictionary`2 param, Dictionary`2 mailCustomValues, List`1 emailAttachments) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 1236
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , Object , ListItem , String , Dictionary`2 , Dictionary`2 , List`1 )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute9[T0,T1,T2,T3,T4,T5,T6,T7,T8,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+   at NPD.DataAccessLayer.BELDataAccessLayer.SaveData(ClientContext context, Web web, ISection section, Dictionary`2 param, Dictionary`2 mailCustomValues, List`1 emailAttachments) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 1045
+2018-08-31 15:40:07,823 [30] ERROR - Id: 47666375-a492-4bde-aaea-90833139fc90
+2018-08-31 15:40:07,831 [30] ERROR - StatusCode: 200
+2018-08-31 15:40:07,836 [30] ERROR - Controller: 
+2018-08-31 15:40:07,840 [30] ERROR - Action: 
+2018-08-31 15:40:07,845 [30] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.SaveBySection(ISection sectionDetails, Dictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 189
+   at NPD.Workflow.Controllers.NPDBaseController.SaveSection(ISection section, Dictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 33
+   at NPD.Workflow.Controllers.NPDController.SaveNPDDetailSection(NPDDetailSection model) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 482
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 15:40:16,207 [30] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 15:40:16,222 [46] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 15:40:16,222 [38] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 15:40:16,222 [40] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 15:40:16,222 [41] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 15:40:16,222 [45] INFO  - MVC - Second, 
+2018-08-31 15:40:59,318 [48] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 15:41:46,211 [27] ERROR - Id: 9b7239df-04eb-4a1a-baf0-1101d847b117
+2018-08-31 15:41:46,231 [27] ERROR - StatusCode: 200
+2018-08-31 15:41:46,238 [27] ERROR - Controller: 
+2018-08-31 15:41:46,244 [27] ERROR - Action: 
+2018-08-31 15:41:46,299 [27] ERROR - Unable to connect to the remote server
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 104.211.216.33:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.DoPost(String url, String contentType, String body, Func`2 webExceptionHandler)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetUserRealm(String login)
+   at Microsoft.SharePoint.Client.Idcrl.IdcrlAuth.GetServiceToken(String username, String password, String serviceTarget, String servicePolicy)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 743
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetEnableSectionNames(String applicationName, String formName, String role) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 3373
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2407
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 70
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 15:41:46,827 [27] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 15:41:46,827 [52] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 15:41:46,827 [41] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 15:41:46,827 [45] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 15:41:46,828 [53] INFO  - MVC - Second, 
+2018-08-31 15:41:52,862 [50] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 15:41:52,880 [46] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-08-31 15:41:52,863 [49] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 15:42:23,848 [46] INFO  - MVC - Application_Start_Done, 
+2018-08-31 15:42:23,865 [50] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 15:42:28,413 [46] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 15:42:28,424 [38] INFO  - MVC - Second, 
+2018-08-31 15:42:31,473 [46] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 15:42:31,473 [37] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 15:42:31,473 [39] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 15:42:34,218 [46] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 15:42:34,240 [50] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-31 15:42:49,938 [49] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 15:42:50,470 [34] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-08-31 15:42:50,470 [49] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 15:42:50,473 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 15:42:50,473 [36] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-08-31 15:42:50,476 [34] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 15:42:50,480 [49] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 15:42:50,484 [35] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 15:42:50,489 [36] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 15:42:50,493 [34] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 15:42:50,497 [49] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 15:42:50,501 [35] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 15:42:50,506 [36] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 2"
+2018-08-31 15:42:50,512 [34] INFO  - WCF - Helper.GetNameFromPersonField, Int32=23
+2018-08-31 15:42:50,520 [35] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-31 15:42:50,525 [36] INFO  - WCF - Helper.GetNameFromPersonField, Int32=24
+2018-08-31 15:42:50,530 [34] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 15:42:50,534 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 15:42:50,539 [36] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 15:42:50,543 [34] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 15:42:50,548 [35] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 15:42:50,553 [36] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 15:42:50,557 [34] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 15:42:50,561 [35] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-08-31 15:42:50,565 [36] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-08-31 15:42:56,172 [35] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-31 15:42:56,172 [34] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-31 15:43:04,206 [35] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-08-31 15:43:16,313 [34] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/cd6dd493afa441a49a847746d4bf8d60?version=2, 
+2018-08-31 15:46:34,892 [11] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 15:46:34,904 [10] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 15:46:34,904 [13] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 15:46:34,904 [11] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 15:46:34,909 [10] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 15:46:34,914 [13] INFO  - MVC - Second, 
+2018-08-31 15:46:39,955 [39] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 15:46:39,956 [13] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 15:46:39,974 [11] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-08-31 15:46:40,787 [13] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/37543fe3ab6148afa9e29000bc9cd81e?version=2, 
+2018-08-31 15:47:55,808 [10] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddProductFeature?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:48:03,470 [11] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveProductFeature?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","ProductFeature","BajajBrand","ReferenceBrand","X-Requested-With"], 
+2018-08-31 15:48:03,502 [52] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetProductFeatureGrid?_=1535710600200, 
+2018-08-31 15:48:06,450 [53] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddProductFeature?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:48:22,655 [52] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveProductFeature?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","ProductFeature","BajajBrand","ReferenceBrand","X-Requested-With"], 
+2018-08-31 15:48:22,671 [51] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetProductFeatureGrid?_=1535710600201, 
+2018-08-31 15:48:48,283 [51] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:48:57,824 [15] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 15:48:57,839 [7] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535710600202, 
+2018-08-31 15:49:02,093 [53] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:49:13,480 [51] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 15:49:13,506 [15] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535710600203, 
+2018-08-31 15:49:16,827 [53] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 15:49:27,854 [11] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 15:49:27,884 [53] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535710600204, 
+2018-08-31 15:49:51,150 [53] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveNPDDetailSection?Length=3Form Data: ["ListDetails[0].ItemId","ListDetails[0].ListName","SectionName","ActionStatus","Status","RequestViewer","RequestViewerName","CopyFrom","CurrentApprover.ApplicationName","CurrentApprover.ApprovalDate","CurrentApprover.ApproveBy","CurrentApprover.Approver","CurrentApprover.AssignDate","CurrentApprover.Comments","CurrentApprover.Days","CurrentApprover.Division","CurrentApprover.DueDate","CurrentApprover.FillByRole","CurrentApprover.FormName","CurrentApprover.HiddenSection","CurrentApprover.ID","CurrentApprover.IsAutoApproval","CurrentApprover.IsEscalate","CurrentApprover.IsReminder","CurrentApprover.Levels","CurrentApprover.RequestID","CurrentApprover.Role","CurrentApprover.SectionName","CurrentApprover.Status","CurrentApprover.SubDivision","CurrentApprover.Title","CurrentApprover.IsOptional","ProposedBy","ProposedByName","WorkflowStatus","ProjectNo","BusinessUnit","RequestDate","ProjectName","ProjectType","ProductCategory","ReferenceBrandAndModel","SampleRequired","CreatorAttachment","VendorName","VendorAddress","ApproversList[0].Role","ApproversList[0].Division","ApproversList[0].Approver","ApproversList[0].ApproverName","ApproversList[1].Role","ApproversList[1].Division","ApproversList[1].Approver","ApproversList[1].ApproverName","ApproversList[2].Role","ApproversList[2].Division","ApproversList[2].Approver","ApproversList[2].ApproverName","ApproversList[3].Role","ApproversList[3].Division","ApproversList[3].Approver","ApproversList[3].ApproverName","GenderList","Gender","IncomeGroupList","IncomeGroup","AgeGroupList","AgeGroup","ProjectTrigger","RegionsList","Regions","ChannelsList","Channels","OtherChannels","CurrentSKUs","PhasedOutSKUs","CurrentSales","AverageSales","mktPreviousYear1","mktCurrentYear1","mktNextYear1","mktPreviousYear2","mktCurrentYear2","mktNextYear2","ProductPositioning","IntendedLaunchDate","RequestorComments","TestSample","TotalNoOfIdenticalTestSample","ProductDescription","ProductImage","TypeOfLightSource","NoOfLampLED","LampLEDMake","LEDPartNumber","LEDBin","NominalCCT","NominalCRI","DriverType","DriverMake","DriverOutputVoltage","DriverNominalCRI","LEDConfiguration","LEDDrivingCurrent","PurposeOfTesting","TestSpecification","PhotometricComment","SpecificationSheet","TechnicalDataSheet","TestReportsAttachment","ButtonCaption","X-Requested-With"], 
+2018-08-31 15:50:15,417 [52] ERROR - Unable to connect to the remote server
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 13.107.136.9:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDNo(String businessunit) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 314
+2018-08-31 15:50:19,529 [33] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="25"
+2018-08-31 15:50:19,975 [36] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 15:50:19,975 [33] INFO  - WCF - Saving Actual Section Properties, 
+2018-08-31 15:50:19,529 [34] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 15:50:20,474 [36] INFO  - WCF - helper.SaveData, Dictionary`2={"UserID":"6","ActionPer":" Submit|NextApproval","ActivityLog":"NPDActivityLog","ApplicationName":"NPD","FormName":"NPD Form","IsNewItem":"True"}
+2018-08-31 16:22:13,939 [52] ERROR - Error While SaveData - List Name:,List ItemID:0 Message:Column 'CopyFrom' does not exist. It may have been deleted by another user.  /sites/BELNPDDev/Lists/NPD, StackTrace:    at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.SaveDataInList(ClientContext context, Web web, Object actualSection, ListItem item, String listName, Dictionary`2 param, Dictionary`2 mailCustomValues, List`1 emailAttachments) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 1236
+   at CallSite.Target(Closure , CallSite , BELDataAccessLayer , ClientContext , Web , Object , ListItem , String , Dictionary`2 , Dictionary`2 , List`1 )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute9[T0,T1,T2,T3,T4,T5,T6,T7,T8,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+   at NPD.DataAccessLayer.BELDataAccessLayer.SaveData(ClientContext context, Web web, ISection section, Dictionary`2 param, Dictionary`2 mailCustomValues, List`1 emailAttachments) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 1045
+2018-08-31 16:22:13,962 [52] ERROR - Id: e665f02a-78f6-47f4-8323-2c84bf498f23
+2018-08-31 16:22:13,969 [52] ERROR - StatusCode: 200
+2018-08-31 16:22:13,995 [52] ERROR - Controller: 
+2018-08-31 16:22:14,039 [52] ERROR - Action: 
+2018-08-31 16:22:14,046 [52] ERROR - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.SaveBySection(ISection sectionDetails, Dictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 189
+   at NPD.Workflow.Controllers.NPDBaseController.SaveSection(ISection section, Dictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 33
+   at NPD.Workflow.Controllers.NPDController.SaveNPDDetailSection(NPDDetailSection model) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 482
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 16:22:14,038 [33] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 16:22:14,442 [27] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 16:22:29,676 [27] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 16:22:29,722 [52] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 16:22:29,723 [47] INFO  - MVC - Second, 
+2018-08-31 16:22:29,751 [27] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 16:22:29,751 [41] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 16:22:29,751 [45] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 16:22:56,973 [34] ERROR - Id: 93b79279-f448-40ed-9612-510178223dbf
+2018-08-31 16:22:56,987 [34] ERROR - StatusCode: 200
+2018-08-31 16:22:56,992 [34] ERROR - Controller: 
+2018-08-31 16:22:56,999 [34] ERROR - Action: 
+2018-08-31 16:22:57,005 [34] ERROR - Unable to connect to the remote server
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 13.107.136.9:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetIdcrlHeader(Uri url, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.Idcrl.SharePointOnlineAuthenticationProvider.GetAuthenticationCookie(Uri url, String username, SecureString password, Boolean alwaysThrowOnFailure, EventHandler`1 executingWebRequest)
+   at Microsoft.SharePoint.Client.SharePointOnlineCredentials.GetAuthenticationCookie(Uri url, Boolean refresh, Boolean alwaysThrowOnFailure)
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.SetupRequestCredential(ClientRuntimeContext context, HttpWebRequest request)
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.GetRequestStream()
+   at Microsoft.SharePoint.Client.ClientContext.GetFormDigestInfoPrivate()
+   at Microsoft.SharePoint.Client.ClientContext.EnsureFormDigest()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.CreateWeb(ClientContext context) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 743
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetEnableSectionNames(String applicationName, String formName, String role) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 3373
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetFormData(ClientContext context, Web web, String applicationName, String formName, Int32 itemId, String userID, IForm form) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2407
+   at NPD.NWorkflow.BusinessLayer.NPDBusinessLayer.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\BusinessLayer\NPDBusinessLayer.cs:line 70
+   at NPD.Workflow.Controllers.NPDBaseController.GetNPDDetails(IDictionary`2 objDict) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDBaseController.cs:line 19
+   at NPD.Workflow.Controllers.NPDController.Index(Int32 id, Boolean IsRetrieve, Int16 urlAction) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.Workflow\Controllers\NPD\NPDController.cs:line 47
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-08-31 16:22:57,837 [46] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/a6d256be183d4852b6c91d95732ccf20?version=2, 
+2018-08-31 16:23:14,556 [10] INFO  - MVC - Application_Start_Done, 
+2018-08-31 16:23:14,565 [12] INFO  - MVC - Begin Request http://localhost:51079/, 
+2018-08-31 16:23:14,802 [10] INFO  - MVC - Second, 
+2018-08-31 16:23:17,427 [10] INFO  - MVC - Start NPD form and ID = 0, 
+2018-08-31 16:23:20,930 [12] INFO  - WCF - Called Helper.IsGroupMember true, 
+2018-08-31 16:23:20,931 [13] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 16:23:20,943 [12] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', 
+2018-08-31 16:23:25,361 [10] INFO  - WCF - Get All SLA Matrix Data  from Sharepoint root Site, 
+2018-08-31 16:23:25,361 [12] INFO  - WCF - Called Helper.GetEnableSectionNames {"NPD Detail Section":true}, 
+2018-08-31 16:23:43,684 [12] INFO  - WCF - called Helper.GetFormData, 
+2018-08-31 16:23:45,383 [12] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 16:23:45,385 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 16:23:45,385 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 16:23:45,386 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 16:23:45,402 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 3"
+2018-08-31 16:23:45,407 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=25
+2018-08-31 16:23:45,411 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="DCR DCN Management Sytem User 2"
+2018-08-31 16:23:45,416 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=26
+2018-08-31 16:23:45,420 [10] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 16:23:45,425 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 16:23:45,429 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 16:23:45,433 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 16:23:45,438 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 16:23:45,442 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 16:23:45,449 [10] INFO  - WCF - Helper.GetNameFromPersonField, String="Clover Sharepoint 1"
+2018-08-31 16:23:45,453 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=6
+2018-08-31 16:23:45,458 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=23
+2018-08-31 16:23:45,463 [10] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 2"
+2018-08-31 16:23:45,468 [8] INFO  - WCF - Helper.GetNameFromPersonField, String="Training Management Sytem User 1"
+2018-08-31 16:23:45,473 [13] INFO  - WCF - Helper.GetNameFromPersonField, Int32=24
+2018-08-31 16:23:45,478 [10] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Notifications"
+2018-08-31 16:23:45,482 [8] INFO  - WCF - Helper.GetNameFromPersonField, Int32=18
+2018-08-31 16:23:45,487 [13] INFO  - WCF - Helper.GetNameFromPersonField, String="SharePoint Admin"
+2018-08-31 16:23:45,491 [10] INFO  - WCF - Helper.GetNameFromPersonField, Int32=17
+2018-08-31 16:23:52,398 [8] INFO  - WCF - Helper.GetAllButtons, 
+2018-08-31 16:23:52,398 [10] INFO  - WCF - Get All Buttons from Sharepoint, 
+2018-08-31 16:23:58,463 [10] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
+2018-08-31 16:24:01,585 [11] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/ed49aca332fb42d58b3cd283ecb6d437?version=2, 
+2018-08-31 16:24:39,489 [13] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddProductFeature?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 16:24:47,697 [13] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveProductFeature?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","ProductFeature","BajajBrand","ReferenceBrand","X-Requested-With"], 
+2018-08-31 16:24:47,753 [10] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetProductFeatureGrid?_=1535712840692, 
+2018-08-31 16:24:52,551 [13] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddProductFeature?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 16:25:00,199 [13] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveProductFeature?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","ProductFeature","BajajBrand","ReferenceBrand","X-Requested-With"], 
+2018-08-31 16:25:00,214 [10] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetProductFeatureGrid?_=1535712840693, 
+2018-08-31 16:25:29,271 [5] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddProductCompetitor?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 16:25:51,379 [8] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 16:26:01,227 [5] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 16:26:01,256 [16] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535712840694, 
+2018-08-31 16:26:04,882 [5] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 16:26:15,474 [8] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 16:26:15,490 [10] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535712840695, 
+2018-08-31 16:26:18,961 [5] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/AddCumulativeSalesProjection?Length=3&X-Requested-With=XMLHttpRequest, 
+2018-08-31 16:26:29,963 [16] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveCumulativeSalesProjection?Length=3Form Data: ["RequestBy","RequestDate","RequestID","ID","Index","ItemAction","Periods","Value","DesiredThroughput","BusinessSaliency","X-Requested-With"], 
+2018-08-31 16:26:29,974 [5] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/GetCumulativeSalesProjectionGrid?_=1535712840696, 
+2018-08-31 16:26:52,540 [16] INFO  - MVC - Begin Ajax Request http://localhost:51079/NPD/SaveNPDDetailSection?Length=3Form Data: ["ListDetails[0].ItemId","ListDetails[0].ListName","SectionName","ActionStatus","Status","RequestViewer","RequestViewerName","CopyFrom","CurrentApprover.ApplicationName","CurrentApprover.ApprovalDate","CurrentApprover.ApproveBy","CurrentApprover.Approver","CurrentApprover.AssignDate","CurrentApprover.Comments","CurrentApprover.Days","CurrentApprover.Division","CurrentApprover.DueDate","CurrentApprover.FillByRole","CurrentApprover.FormName","CurrentApprover.HiddenSection","CurrentApprover.ID","CurrentApprover.IsAutoApproval","CurrentApprover.IsEscalate","CurrentApprover.IsReminder","CurrentApprover.Levels","CurrentApprover.RequestID","CurrentApprover.Role","CurrentApprover.SectionName","CurrentApprover.Status","CurrentApprover.SubDivision","CurrentApprover.Title","CurrentApprover.IsOptional","ProposedBy","ProposedByName","WorkflowStatus","ProjectNo","BusinessUnit","RequestDate","ProjectName","ProjectType","ProductCategory","ReferenceBrandAndModel","SampleRequired","CreatorAttachment","VendorName","VendorAddress","ApproversList[0].Role","ApproversList[0].Division","ApproversList[0].Approver","ApproversList[0].ApproverName","ApproversList[1].Role","ApproversList[1].Division","ApproversList[1].Approver","ApproversList[1].ApproverName","ApproversList[2].Role","ApproversList[2].Division","ApproversList[2].Approver","ApproversList[2].ApproverName","ApproversList[3].Role","ApproversList[3].Division","ApproversList[3].Approver","ApproversList[3].ApproverName","GenderList","Gender","IncomeGroupList","IncomeGroup","AgeGroupList","AgeGroup","ProjectTrigger","RegionsList","Regions","ChannelsList","Channels","OtherChannels","CurrentSKUs","PhasedOutSKUs","CurrentSales","AverageSales","mktPreviousYear1","mktCurrentYear1","mktNextYear1","mktPreviousYear2","mktCurrentYear2","mktNextYear2","ProductPositioning","IntendedLaunchDate","RequestorComments","TestSample","TotalNoOfIdenticalTestSample","ProductDescription","ProductImage","TypeOfLightSource","NoOfLampLED","LampLEDMake","LEDPartNumber","LEDBin","NominalCCT","NominalCRI","DriverType","DriverMake","DriverOutputVoltage","DriverNominalCRI","LEDConfiguration","LEDDrivingCurrent","PurposeOfTesting","TestSpecification","PhotometricComment","SpecificationSheet","TechnicalDataSheet","TestReportsAttachment","ButtonCaption","X-Requested-With"], 
+2018-08-31 16:26:58,748 [8] INFO  - WCF - NPD No is CO-LUM-PT-20180831-00001, 
+2018-08-31 16:26:58,749 [5] INFO  - WCF - NPD Current Value + 1 = 1, 
+2018-08-31 16:27:00,754 [8] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:00,754 [17] INFO  - WCF - Saving Actual Section Properties, 
+2018-08-31 16:27:00,754 [19] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:00,755 [18] INFO  - WCF - helper.SaveData, Dictionary`2={"UserID":"6","ActionPer":" Submit|NextApproval","ActivityLog":"NPDActivityLog","ApplicationName":"NPD","FormName":"NPD Form","IsNewItem":"True"}
+2018-08-31 16:27:00,755 [14] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="25"
+2018-08-31 16:27:06,046 [14] INFO  - WCF - context.ExecuteQuery() Save Main List Item., 
+2018-08-31 16:27:10,483 [16] INFO  - WCF - Actual Section Properties Saved, Int32=83
+2018-08-31 16:27:13,050 [16] INFO  - WCF - Saving Local Approver Matrix 'NPDApprovalMatrix'List=null, 
+2018-08-31 16:27:13,050 [14] INFO  - WCF - Reference Number Generated 'NPD Form-2018-83', 
+2018-08-31 16:27:13,050 [19] INFO  - WCF - Helper.GenerateReferenceNo, String="NPD Form-2018-83"
+2018-08-31 16:27:13,070 [26] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="26"
+2018-08-31 16:27:13,080 [16] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="18"
+2018-08-31 16:27:13,071 [30] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="25"
+2018-08-31 16:27:13,071 [29] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:13,075 [27] INFO  - WCF - Set Viewer  Approver ID='6,25' and RequestId='83', 
+2018-08-31 16:27:13,070 [25] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="25"
+2018-08-31 16:27:13,075 [18] INFO  - WCF - Set Viewer  Approver ID='25' and RequestId='83', 
+2018-08-31 16:27:13,074 [17] INFO  - WCF - Set Viewer  Approver ID='6' and RequestId='83', 
+2018-08-31 16:27:13,074 [19] INFO  - WCF - Started form level assignment, 
+2018-08-31 16:27:13,080 [26] INFO  - WCF - Set Viewer  Approver ID='26' and RequestId='83', 
+2018-08-31 16:27:13,074 [5] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="17"
+2018-08-31 16:27:13,084 [33] INFO  - WCF - Set Viewer  Approver ID='18' and RequestId='83', 
+2018-08-31 16:27:13,085 [32] INFO  - WCF - Calling approversDataFromList.UpdateStatusofApprovalMatrix => currlevel=0, previousLevel=-1, param={"UserID":"6","ActionPer":" Submit|NextApproval","ActivityLog":"NPDActivityLog","ApplicationName":"NPD","FormName":"NPD Form","IsNewItem":"True"}, actionperformed=NextApproval, list=[{"ID":0,"Title":"NPD Detail Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"NPD Detail Section","HiddenSection":"","Levels":"0","Role":"Creator","Days":7.0,"IsAutoApproval":false,"FillByRole":"","Division":"","SubDivision":null,"Approver":"6","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"NPD Approver1 Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"NPD Approver1 Section","HiddenSection":"","Levels":"1","Role":"Approver1","Days":7.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"17","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"NPD Approver2 Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"NPD Approver2 Section","HiddenSection":"","Levels":"2","Role":"Approver2","Days":7.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"18","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"NPD Approver3 Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"NPD Approver3 Section","HiddenSection":"","Levels":"3","Role":"Approver3","Days":7.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"26","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"NPD Viewer","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"","HiddenSection":"","Levels":"-2","Role":"Viewer","Days":0.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"6,25","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":false,"IsReminder":false,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"ABS Admin Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"ABS Admin Section","HiddenSection":"","Levels":"4","Role":"ABS Admin","Days":7.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"25","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":false,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null}], 
+2018-08-31 16:27:13,084 [31] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:13,085 [34] INFO  - WCF - Set Viewer  Approver ID='17' and RequestId='83', 
+2018-08-31 16:27:13,098 [30] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:13,098 [16] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="17"
+2018-08-31 16:27:13,105 [29] INFO  - WCF - Case Action Performed 'NextApproval', 
+2018-08-31 16:27:13,110 [27] INFO  - WCF - End of form level assignment, 
+2018-08-31 16:27:13,114 [25] INFO  - WCF - called approversDataFromList.UpdateStatusofApprovalMatrix => currlevel=0, previousLevel=-1, param={"UserID":"6","ActionPer":" Submit|NextApproval","ActivityLog":"NPDActivityLog","ApplicationName":"NPD","FormName":"NPD Form","IsNewItem":"True"}, actionperformed=NextApproval, list=[{"ID":0,"Title":"NPD Detail Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"NPD Detail Section","HiddenSection":"","Levels":"0","Role":"Creator","Days":7.0,"IsAutoApproval":false,"FillByRole":"","Division":"","SubDivision":null,"Approver":"6","ApproverName":null,"Status":"Approved","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":"2018-08-31T16:27:12.9847001+05:30","IsEscalate":true,"IsReminder":true,"RequestID":83,"ApproveBy":"6","IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"NPD Approver1 Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"NPD Approver1 Section","HiddenSection":"","Levels":"1","Role":"Approver1","Days":7.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"17","ApproverName":null,"Status":"Pending","Comments":null,"AssignDate":"2018-08-31T16:27:12.9856993+05:30","DueDate":"2018-09-11T16:27:12.9847001+05:30","ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"NPD Approver2 Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"NPD Approver2 Section","HiddenSection":"","Levels":"2","Role":"Approver2","Days":7.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"18","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"NPD Approver3 Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"NPD Approver3 Section","HiddenSection":"","Levels":"3","Role":"Approver3","Days":7.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"26","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":true,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"NPD Viewer","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"","HiddenSection":"","Levels":"-2","Role":"Viewer","Days":0.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"6,25","ApproverName":null,"Status":"Not Assigned","Comments":null,"AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":false,"IsReminder":false,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null},{"ID":0,"Title":"ABS Admin Section","ApplicationName":"NPD","FormName":"NPD Form","SectionName":"ABS Admin Section","HiddenSection":"","Levels":"4","Role":"ABS Admin","Days":7.0,"IsAutoApproval":false,"FillByRole":"Creator","Division":"","SubDivision":null,"Approver":"25","ApproverName":null,"Status":"Not Assigned","Comments":"","AssignDate":null,"DueDate":null,"ApprovalDate":null,"IsEscalate":false,"IsReminder":true,"RequestID":83,"ApproveBy":null,"IsOptional":false,"FormType":"Main","Files":null,"FileNameList":null,"ReasonForChange":null,"ReasonForDelay":null}], 
+2018-08-31 16:27:13,119 [18] INFO  - WCF - Helper.SaveFormFields in list 'NPD' id='83' with values = {"ReferenceNo":"NPD Form-2018-83","Creator":[{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":6,"LookupValue":null}],"Approver1":[{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":17,"LookupValue":null}],"Approver2":[{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":18,"LookupValue":null}],"Approver3":[{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":26,"LookupValue":null}],"Viewer":[{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":6,"LookupValue":null},{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":25,"LookupValue":null}],"ABSAdmin":[{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":25,"LookupValue":null}],"LastActionPerformed":"NextApproval","LastActionBy":{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":6,"LookupValue":null},"LastActionByRole":"Creator","PendingWith":"Approver1","NextApprover":[{"Email":null,"TypeId":"{c956ab54-16bd-4c18-89d2-996f57282a6f}","LookupId":17,"LookupValue":null}],"FormLevel":"0|1","ApprovalStatus":"In Progress","Status":"Submitted","WorkflowStatus":"Pending With Approver1"}, 
+2018-08-31 16:27:13,193 [34] INFO  - WCF - Helper.SaveAllTransOfSection transaction 'Product Feature' list = [{"ID":0,"Index":1,"ItemAction":0,"Status":null,"ProductFeature":"Must have","BajajBrand":"Bajaj","ReferenceBrand":"NA","RequestID":83,"RequestDate":"2018-08-31T16:24:39","RequestBy":"6"},{"ID":0,"Index":2,"ItemAction":0,"Status":null,"ProductFeature":"Should have","BajajBrand":"Bajaj Electricals","ReferenceBrand":"NA","RequestID":83,"RequestDate":"2018-08-31T16:24:52","RequestBy":"6"}], 
+2018-08-31 16:27:14,941 [10] ERROR - Error While Save Fields FieldName:ABSAdmin, MessageObject must implement IConvertible., StackTrace   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType)
+   at NPD.DataAccessLayer.BELDataAccessLayer.SaveDataInList(ClientContext context, Web web, Object actualSection, ListItem item, String listName, Dictionary`2 param, Dictionary`2 mailCustomValues, List`1 emailAttachments) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 1689
+2018-08-31 16:27:15,051 [16] INFO  - WCF - Save Form Field Name='WorkflowStatus'='Pending With Approver1', 
+2018-08-31 16:27:15,051 [5] INFO  - WCF - Save Form Field Name='Status'='Submitted', 
+2018-08-31 16:27:15,066 [17] INFO  - WCF - Calling SetItemPermission -> itemid=83, listname=NPD, {"6,6,25":"Read","17":"Contribute"}, 
+2018-08-31 16:27:15,322 [19] INFO  - WCF - Helper.SaveAllTransOfSection transaction 'Cumulative Sales Projection' list = [{"ID":0,"RequestID":83,"RequestDate":"2018-08-31T16:25:51","Index":1,"ItemAction":0,"Status":null,"Periods":"6 months","Value":7.0,"DesiredThroughput":70.0,"BusinessSaliency":60.0,"RequestBy":"6"},{"ID":0,"RequestID":83,"RequestDate":"2018-08-31T16:26:04","Index":2,"ItemAction":0,"Status":null,"Periods":"12 months","Value":6.0,"DesiredThroughput":68.0,"BusinessSaliency":60.0,"RequestBy":"6"},{"ID":0,"RequestID":83,"RequestDate":"2018-08-31T16:26:18","Index":3,"ItemAction":0,"Status":null,"Periods":"24 months","Value":4.0,"DesiredThroughput":68.0,"BusinessSaliency":70.0,"RequestBy":"6"}], 
+2018-08-31 16:27:15,322 [17] INFO  - WCF - Helper.SaveAllTransOfSection transaction done, 
+2018-08-31 16:27:15,444 [16] INFO  - WCF - Get User Emails from RoleDefinitionBindingCollection -> 6,6,25, 
+2018-08-31 16:27:15,444 [25] INFO  - WCF - Condition PAssed (context != null && web != null && usersWithPermission != null && item != null), 
+2018-08-31 16:27:15,444 [5] INFO  - WCF - item ResetRoleInheritance Called, 
+2018-08-31 16:27:15,444 [18] INFO  - WCF - item BreakRoleInheritance(false,true); Called, 
+2018-08-31 16:27:15,853 [10] ERROR - The remote server returned an error: (400) Bad Request.
+System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.EnsureUser(ClientContext context, Web web, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 285
+2018-08-31 16:27:15,962 [16] INFO  - WCF - Error while resolve : 6, 
+2018-08-31 16:27:16,382 [16] INFO  - WCF - Adding collRoleDefinitionBindingAssignee -> web.RoleDefinitions.GetByName(Read), 
+2018-08-31 16:27:16,573 [10] ERROR - Error While Set Item Permission  - Item ID:83, Message:This operation is not allowed on an object that inherits permissions., StackTrace:    at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.SetItemPermission(ClientContext context, Web web, ListItem& item, Dictionary`2 usersWithPermission) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2314
+2018-08-31 16:27:16,681 [19] INFO  - WCF - Get User Emails from RoleDefinitionBindingCollection -> 17, 
+2018-08-31 16:27:16,895 [16] INFO  - WCF - Adding collRoleDefinitionBindingAssignee -> web.RoleDefinitions.GetByName(Contribute), 
+2018-08-31 16:27:17,268 [10] ERROR - Error While Set Item Permission  - Item ID:83, Message:This operation is not allowed on an object that inherits permissions., StackTrace:    at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.SetItemPermission(ClientContext context, Web web, ListItem& item, Dictionary`2 usersWithPermission) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2314
+2018-08-31 16:27:17,625 [10] ERROR - Error while granting Permission to Admin Group
+2018-08-31 16:27:17,629 [10] ERROR - This operation is not allowed on an object that inherits permissions.
+Microsoft.SharePoint.Client.ServerException: This operation is not allowed on an object that inherits permissions.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.SetItemPermission(ClientContext context, Web web, ListItem& item, Dictionary`2 usersWithPermission) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2332
+2018-08-31 16:27:17,858 [10] ERROR - Error while granting Permission to Viewer Group
+2018-08-31 16:27:17,862 [10] ERROR - This operation is not allowed on an object that inherits permissions.
+Microsoft.SharePoint.Client.ServerException: This operation is not allowed on an object that inherits permissions.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.SetItemPermission(ClientContext context, Web web, ListItem& item, Dictionary`2 usersWithPermission) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2347
+2018-08-31 16:27:17,975 [19] INFO  - WCF - Calling SaveAproverMatrix -> NPDApprovalMatrix, 
+2018-08-31 16:27:17,975 [16] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:17,975 [5] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:17,980 [19] INFO  - WCF - Calling SetItemPermission -> Complete, 
+2018-08-31 16:27:17,985 [16] INFO  - WCF - Called SetItemPermission Permission Assigned ->False, 
+2018-08-31 16:27:18,037 [5] INFO  - WCF - Helper.SaveAllTransOfSection transaction done, 
+2018-08-31 16:27:18,774 [5] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="17"
+2018-08-31 16:27:19,741 [19] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="18"
+2018-08-31 16:27:20,447 [19] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="26"
+2018-08-31 16:27:21,190 [16] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:21,190 [19] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="25"
+2018-08-31 16:27:21,834 [16] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="25"
+2018-08-31 16:27:22,585 [19] INFO  - WCF - Calling SaveAproverMatrix -> Complete, 
+2018-08-31 16:27:22,597 [19] INFO  - WCF - Aync update NPD Current value currentValue : 1 BusinessUnit : LUM, 
+2018-08-31 16:27:22,708 [19] INFO  - WCF - Helper.GetFieldUserValueFromPerson, String="6"
+2018-08-31 16:27:22,712 [19] INFO  - WCF - Called Activity Log Condition Passed-> listname=NPDActivityLog, lookupid=83, activityby=6, 
+2018-08-31 16:27:22,716 [19] INFO  - WCF - Calling Activity Log -> {"UserID":"6","ActionPer":" Submit|NextApproval","ActivityLog":"NPDActivityLog","ApplicationName":"NPD","FormName":"NPD Form","IsNewItem":"True"}, 
+2018-08-31 16:27:23,086 [19] INFO  - WCF - Update DCR No CO-LUM-PT-20180831-00001, 
+2018-08-31 16:27:23,319 [14] INFO  - WCF - Activity Log Parameter Saved -> Activity= Submit, 
+Changes=CopyFrom	0
+ProposedBy	
+RequestDate	8/31/2018 4:26:56 PM
+WorkflowStatus	Pending With Approver1
+Status	Submitted
+Assigned date	
+Approved/Updated date	31/08/2018
+Approved/Updated time	04:27 PM
+Approver Comment	
+BusinessUnit	LUM
+ProjectName	Testing
+ProjectType	CO
+ProductCategory	PT
+ReferenceBrandAndModel	NA
+SampleRequired	False
+Gender	Male
+IncomeGroup	<50k
+AgeGroup	18-24
+ProjectTrigger	Competition benchmarking
+Regions	East
+Channels	CSD
+OtherChannels	
+mktPreviousYear1	70
+mktPreviousYear2	6
+mktCurrentYear1	80
+mktCurrentYear2	70
+mktNextYear1	90
+mktNextYear2	80
+ProductPositioning	Economy
+IntendedLaunchDate	9/14/2018 12:00:00 AM
+RequestorComments	NA
+ProjectNo	CO-LUM-PT-20180831-00001
+CurrentSKUs	11
+PhasedOutSKUs	19
+CurrentSales	613
+AverageSales	20
+Files	
+CreatorAttachment	
+OldProjectNo	
+OldNPDCreatedDate	
+OldNPDRejectedDate	
+ABSAdmin	DCR DCN Management Sytem User 3
+RequestViewer	Clover Sharepoint 1
+VendorName	NA
+VendorAddress	NA
+Month	August
+Year	2018
+TestSample	
+TotalNoOfIdenticalTestSample	
+ProductDescription	
+ProductImage	
+TypeOfLightSource	
+NoOfLampLED	
+LampLEDMake	
+LEDPartNumber	
+LEDBin	
+NominalCCT	
+NominalCRI	
+DriverType	
+DriverMake	
+DriverOutputVoltage	
+DriverNominalCRI	
+LEDConfiguration	
+LEDDrivingCurrent	
+PurposeOfTesting	
+TestSpecification	
+PhotometricComment	
+SpecificationSheet	
+TechnicalDataSheet	
+TestReportsAttachment	, 
+ActivityDate=8/31/2018, 
+ActivityBy=6, 
+RequestID=83, 
+SectionName=NPD Detail Section, 
+, 
+2018-08-31 16:27:23,319 [5] INFO  - WCF - Calling Activity Log -> Complete, 
+2018-08-31 16:27:23,977 [17] INFO  - WCF - Helper.GetNameUsingUserID, String="6"
+2018-08-31 16:27:23,977 [10] INFO  - WCF - Helper.GetNameUsingUserID got an user with name, String="Clover Sharepoint 1"
+2018-08-31 16:27:23,989 [5] INFO  - WCF - Helper.GetNameUsingUserID got an user with name, String="SharePoint Admin"
+2018-08-31 16:27:23,989 [19] INFO  - WCF - Helper.GetNameUsingUserID, String="17"
+2018-08-31 16:27:27,130 [25] INFO  - WCF - Helper.GetEmailUsingUserID, String="6"
+2018-08-31 16:27:27,130 [26] INFO  - WCF - Email Body Replacement Listname : Custom , FieldName : ItemLinkClickHere, 
+2018-08-31 16:27:27,130 [5] INFO  - WCF - Email Body Replacement Listname : NPD , FieldName : ProjectNo, 
+2018-08-31 16:27:27,130 [18] INFO  - WCF - Helper.GetEmailUsingUserID got an user with email, String="cloversharepoint1@bajajelectricals.com"
+2018-08-31 16:27:27,130 [10] INFO  - WCF - Helper.GetEmailUsingUserID, String="17"
+2018-08-31 16:27:27,130 [17] INFO  - WCF - Helper.GetEmailUsingUserID got an user with email, String="cloversharepoint1@bajajelectricals.com"
+2018-08-31 16:27:27,130 [19] INFO  - WCF - Helper.GetEmailUsingUserID, String="6"
+2018-08-31 16:27:27,130 [14] INFO  - WCF - Email Body Replacement Listname : NPD , FieldName : ProjectNo, 
+2018-08-31 16:29:03,358 [18] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 16:29:03,359 [25] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 16:33:00,450 [25] INFO  - MVC - Second, 
+2018-08-31 16:33:00,450 [21] INFO  - MVC - Begin Request http://localhost:51079/?ID=83, 
+2018-08-31 16:33:00,450 [24] INFO  - MVC - Start NPD form and ID = 83, 
+2018-08-31 16:33:00,450 [3] INFO  - WCF - Helper GetFormData Condition passed for appname=NPD, formNameNPD Form, User Id=6, 
+2018-08-31 16:33:01,942 [20] ERROR - No Role Found for Item ID : 83 User ID : 6; If User Inside the group then also this error comes.
+2018-08-31 16:33:01,946 [20] ERROR - Access denied. You do not have permission to perform this action or access this resource.
+Microsoft.SharePoint.Client.ServerUnauthorizedAccessException: Access denied. You do not have permission to perform this action or access this resource.
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream)
+   at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQueryToServer(ChunkStringBuilder sb)
+   at Microsoft.SharePoint.Client.ClientRequest.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientRuntimeContext.ExecuteQuery()
+   at Microsoft.SharePoint.Client.ClientContext.ExecuteQuery()
+   at NPD.DataAccessLayer.BELDataAccessLayer.GetUserPermissionOnItem(ClientContext context, Web web, String mainListName, Int32 itemId, String userID) in C:\Users\cloverspd1\Downloads\Synoverge-New\Synoverge\30August\NPD.Workflow\NPD.DataAccessLayer\Common\BELDataAccessLayer.cs:line 2219
+2018-08-31 16:33:03,034 [25] INFO  - WCF - Called Helper.GetCurrentUserRole and Role=, 
+2018-08-31 16:33:03,045 [20] INFO  - MVC - Begin Request http://localhost:51079/Master/NotAuthorize, 
+2018-08-31 16:33:05,749 [20] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/86ee5d5c73eb45b4820fb616d40e1f64?version=2, 
+2018-08-31 16:38:10,635 [43] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 16:50:04,331 [35] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 16:55:08,053 [51] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 16:55:08,053 [59] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:00:10,815 [52] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:00:10,816 [56] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:07:06,808 [56] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:07:06,808 [52] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:12:10,439 [50] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:12:10,439 [78] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:17:11,033 [88] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:17:11,158 [84] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:22:12,053 [90] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:22:12,168 [89] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:27:13,035 [84] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:27:13,145 [90] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:32:14,607 [86] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:32:14,685 [50] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:37:18,614 [87] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:37:18,817 [90] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:42:22,037 [84] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:42:22,147 [73] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:47:23,037 [89] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:47:23,146 [84] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:52:24,034 [80] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:52:24,146 [87] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 17:57:25,035 [71] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 17:57:25,135 [76] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 18:02:26,032 [62] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 18:02:26,132 [69] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 18:07:27,035 [54] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 18:07:27,137 [47] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 18:12:28,033 [41] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 18:12:28,133 [53] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 18:17:29,037 [22] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 18:17:29,146 [32] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
+2018-08-31 18:22:30,034 [58] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-31 18:22:30,147 [94] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 

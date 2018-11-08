@@ -1,0 +1,52 @@
+﻿@using NPD.Workflow.Models.NPD
+@using NPD.CommonDataContract
+@model List<ITrans>
+
+<div class="table-responsive" >
+    <table class="table table-hover table-bordered someTable" id="marketinformationtable">
+        <thead>
+            <tr>
+                <th>@Html.ResourceValue("CompetitoeInformation_Brand", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("CompetitoeInformation_SalesValue", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("CompetitoeInformation_MarketShare", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("CompetitoeInformation_SalesVolume", ResourceNames.NPD)</th>
+                <th>@Html.ResourceValue("CompetitoeInformation_RLP", ResourceNames.NPD)</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count() > 0)
+            {
+                foreach (NPDProductCompetitor item in Model)
+                {
+                    <tr>
+                        <td>@item.Brand</td>
+                        <td>@item.SalesValue</td>
+                        <td>@item.MarketShare</td>
+                        <td>@item.SalesVolume</td>
+                        <td>@item.RLP</td>
+                        <td>
+                            <a class="btn ink-reaction btn-floating-action" data-ajax="true" data-ajax-loading="#loading" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#addeditProductCompetitor" href="@Url.Action("AddEditProductCompetitor", "NPD", new { index = @item.Index })">
+                                <i class='fa fa-edit'></i>
+                            </a>
+                            <a class="btn ink-reaction btn-floating-action btn-danger" onclick="ProductCompetitorDelete('@item.Index');">
+                                <i class='fa fa-trash-o'></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="9" class="text-center text-danger">
+                        @Html.ResourceValue("Grid_Text_NoProductCompetitor", ResourceNames.NPD)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
