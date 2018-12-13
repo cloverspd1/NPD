@@ -1,14 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
-     Name="SPAppUAT"
-     ProductID="{4fe7b9eb-d3ab-49db-9c54-f2346967456f}"
-     Version="1.0.0.4"
+     Name="SPNewAppProduction"
+     ProductID="{4fe7b9eb-d3ab-49db-9c54-f2328767456f}"
+     Version="1.0.0.5"
      SharePointMinVersion="16.0.0.0"
 >
+<!--old npd productID-->
+  <!--ProductID="{4fe7b9eb-d3ab-49db-9c54-f2346967456f}"
+  Version="1.0.0.4"
+  SharePointMinVersion="16.0.0.0"-->
   <Properties>
     <!--<Title>NPD.SPAppProduction</Title>-->
-    <Title>NPD.SPAppUAT</Title>
+    <Title>NPD.SPNewAppProduction</Title>
     <StartPage>~remoteAppUrl/?{StandardTokens}</StartPage>
   </Properties>
 

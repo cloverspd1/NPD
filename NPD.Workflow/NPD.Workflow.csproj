@@ -417,7 +417,9 @@
     <None Include="Properties\PublishProfiles\NPDNewTest - Web Deploy %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\NPDNewTest - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\NPDPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\NPDTestDev - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\NPDTestDev - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\NPDTestDev - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\NPDTestDev - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\NPD_New_Production.pubxml" />
     <None Include="Properties\PublishProfiles\NPD_Production.pubxml" />
@@ -563,11 +565,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51079</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51079/</IISUrl>
+          <IISUrl>http://localhost:51075/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
