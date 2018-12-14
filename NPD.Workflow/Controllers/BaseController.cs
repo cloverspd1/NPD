@@ -125,7 +125,7 @@
                     {
                         this.SPCurrentUser = new UserDetails();
                         // this.SPCurrentUser.UserId = "24";
-                        //this.SPCurrentUser.UserId = "20";  //cloverspd1
+                        this.SPCurrentUser.UserId = "20";  //cloverspd1
                         //this.SPCurrentUser.UserId = "31";  //Sharma Atul
                         //this.SPCurrentUser.UserId = "30";  //Jade Ashish
                        // this.SPCurrentUser.UserId = "118";  //Yogita
@@ -135,7 +135,7 @@
                                                            //this.SPCurrentUser.UserId = "34";  //Sharma Atul
                                                            //this.SPCurrentUser.UserId = "58";  //Vashishtha Manishkumar
                                                            // this.SPCurrentUser.UserId = "105";  //Pradhan Lalit
-                                                            this.SPCurrentUser.UserId = "32";  //Patil bhushan
+                                                            //this.SPCurrentUser.UserId = "32";  //Patil bhushan
                                                             //this.SPCurrentUser.UserId = "61";  //Vashishtha Manishkumar
                                                             // this.SPCurrentUser.UserId = "118";  //Vashishtha Manishkumar
                                                             //this.SPCurrentUser.UserId = "28";  //Patkar Mankesh

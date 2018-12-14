@@ -256,6 +256,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NPD.resx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\NPD1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NPD.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\CustomSessionAuthenticationModule.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -337,6 +342,9 @@
     <Compile Include="Models\NPD\NPDMarketInformation.cs" />
     <Compile Include="Models\NPD\NPDProductCompetitor.cs" />
     <Compile Include="Models\NPD\NPDProductFeature.cs" />
+    <Compile Include="Models\NPD\NPDStageGate1.cs" />
+    <Compile Include="Models\NPD\NPDStageGate2.cs" />
+    <Compile Include="Models\NPD\NPDStageGate3.cs" />
     <Compile Include="Models\NPD\NPDTargetRLP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharePointContext.cs" />
@@ -506,6 +514,9 @@
     <Content Include="Views\NPD\_PhotometricTest.cshtml" />
     <Content Include="Views\NPD\_LightSourceDetails.cshtml" />
     <Content Include="Views\NPD\_DriverBallastDetails.cshtml" />
+    <Content Include="Views\NPD\_npdStageGate1Section.cshtml" />
+    <Content Include="Views\NPD\_npdStageGate2Section.cshtml" />
+    <Content Include="Views\NPD\_npdStageGate3Section.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -4,7 +4,7 @@
 @model  IContract
 @{
     NPDContract contract = Model as NPDContract;
-   
+
     NPDForm form = contract.Forms.FirstOrDefault() as NPDForm;
     ViewBag.Title = "New Product Development";
     NPDDetailSection npdDetailSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDDETAILSECTION)) as NPDDetailSection;
@@ -13,7 +13,11 @@
     NPDApprover2Section npdApprver2Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER2SECTION)) as NPDApprover2Section;
     NPDApprover3Section npdApprver3Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER3SECTION)) as NPDApprover3Section;
     NPDABSAdminSection npdABSAdminSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDABSADMINSECTION)) as NPDABSAdminSection;
-   
+
+    NPDStageGate1 NPDStageGate1Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE1SECTION)) as NPDStageGate1;
+    NPDStageGate2 NPDStageGate2Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE2SECTION)) as NPDStageGate2;
+    NPDStageGate3 NPDStageGate3Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE3SECTION)) as NPDStageGate3;
+
 }
 
 @if (form != null)
@@ -183,6 +187,66 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
+                        }
+                        @if (NPDStageGate1Section != null)
+                        {
+                            string sectionActiveCss = NPDStageGate1Section.IsActive ? string.Empty : "disabled";
+                            <div class="card @sectionActiveCss">
+                                <div class="card-head" data-toggle="collapse" data-target="#NPDStageGate1Section">
+                                    @Html.ResourceValue("Section_Title_NPDStageGate1Section", ResourceNames.NPD)
+
+                                    <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                </div>
+                                <div class="card-body" id="NPDStageGate1Section">
+                                    <div class="form-horizontal">
+
+                                        @Html.Partial("_npdStageGate1Section", NPDStageGate1Section)
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        }
+                        @if (NPDStageGate2Section != null)
+                        {
+                            string sectionActiveCss = NPDStageGate2Section.IsActive ? string.Empty : "disabled";
+                            <div class="card @sectionActiveCss">
+                                <div class="card-head" data-toggle="collapse" data-target="#NPDStageGate2Section">
+                                    @Html.ResourceValue("Section_Title_NPDStageGate2Section", ResourceNames.NPD)
+
+                                    <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                </div>
+                                <div class="card-body" id="NPDStageGate2Section">
+                                    <div class="form-horizontal">
+
+                                        @Html.Partial("_npdStageGate2Section", NPDStageGate2Section)
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        }
+                        @if (NPDStageGate3Section != null)
+                        {
+                            string sectionActiveCss = NPDStageGate3Section.IsActive ? string.Empty : "disabled";
+                            <div class="card @sectionActiveCss">
+                                <div class="card-head" data-toggle="collapse" data-target="#NPDStageGate3Section">
+                                    @Html.ResourceValue("Section_Title_NPDStageGate3Section", ResourceNames.NPD)
+
+                                    <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
+                                </div>
+                                <div class="card-body" id="NPDStageGate3Section">
+                                    <div class="form-horizontal">
+
+                                        @Html.Partial("_npdStageGate3Section", NPDStageGate3Section)
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
                         }
 
 

@@ -109,6 +109,24 @@
                             absAdminSection.ABSAdminAttachment = absAdminSection.Files != null && absAdminSection.Files.Count > 0 ? JsonConvert.SerializeObject(absAdminSection.Files.Where(x => !string.IsNullOrEmpty(absAdminSection.ABSAdminAttachment) && absAdminSection.ABSAdminAttachment.Split(',').Contains(x.FileName)).ToList()) : string.Empty;
                         }
 
+                        var stagegate1Section = npdForm.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE1SECTION)) as NPDStageGate1;
+                        if (stagegate1Section != null)
+                        {
+                            stagegate1Section.StageGate1Attachment = stagegate1Section.Files != null && stagegate1Section.Files.Count > 0 ? JsonConvert.SerializeObject(stagegate1Section.Files.Where(x => !string.IsNullOrEmpty(stagegate1Section.StageGate1Attachment) && stagegate1Section.StageGate1Attachment.Split(',').Contains(x.FileName)).ToList()) : string.Empty;
+                        }
+
+                        var stagegate2Section = npdForm.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE2SECTION)) as NPDStageGate2;
+                        if (stagegate2Section != null)
+                        {
+                            stagegate2Section.StageGate2Attachment = stagegate2Section.Files != null && stagegate2Section.Files.Count > 0 ? JsonConvert.SerializeObject(stagegate2Section.Files.Where(x => !string.IsNullOrEmpty(stagegate2Section.StageGate2Attachment) && stagegate2Section.StageGate2Attachment.Split(',').Contains(x.FileName)).ToList()) : string.Empty;
+                        }
+
+                        var stagegate3Section = npdForm.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE3SECTION)) as NPDStageGate3;
+                        if (stagegate3Section != null)
+                        {
+                            stagegate3Section.StageGate3Attachment = stagegate3Section.Files != null && stagegate3Section.Files.Count > 0 ? JsonConvert.SerializeObject(stagegate3Section.Files.Where(x => !string.IsNullOrEmpty(stagegate3Section.StageGate3Attachment) && stagegate3Section.StageGate3Attachment.Split(',').Contains(x.FileName)).ToList()) : string.Empty;
+                        }
+
                         if (!string.IsNullOrWhiteSpace(sectionDetails.BusinessUnit) && (sectionDetails.BusinessUnit.ToUpper() == "CP-LTG" || sectionDetails.BusinessUnit.ToUpper() == "LUM"))
                         {
                             sectionDetails.ProductImage = sectionDetails.Files != null && sectionDetails.Files.Count > 0 ? JsonConvert.SerializeObject(sectionDetails.Files.Where(x => !string.IsNullOrEmpty(sectionDetails.ProductImage) && sectionDetails.ProductImage.Split(',').Contains(x.FileName)).ToList()) : string.Empty;

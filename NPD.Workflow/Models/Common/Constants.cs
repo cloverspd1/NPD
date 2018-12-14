@@ -180,6 +180,21 @@ namespace NPD.Workflow.Models.Common
         /// <summary>
         /// The NPD approver1 section
         /// </summary>
+        public const string NPDSTAGEGATE1SECTION = "StageGate1 Section";
+
+        /// <summary>
+        /// The NPD approver1 section
+        /// </summary>
+        public const string NPDSTAGEGATE2SECTION = "StageGate2 Section";
+
+        /// <summary>
+        /// The NPD approver1 section
+        /// </summary>
+        public const string NPDSTAGEGATE3SECTION = "StageGate3 Section";
+
+        /// <summary>
+        /// The NPD approver1 section
+        /// </summary>
         public const string NPDADMINSECTION = "NPD Admin Detail Section";
 
 

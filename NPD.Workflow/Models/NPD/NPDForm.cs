@@ -34,6 +34,9 @@ namespace NPD.Workflow.Models.NPD
                 this.SectionsList.Add(new NPDApprover2Section(true));
                 this.SectionsList.Add(new NPDApprover3Section(true));
                 this.SectionsList.Add(new NPDABSAdminSection(true));
+                this.SectionsList.Add(new NPDStageGate1(true));
+                this.SectionsList.Add(new NPDStageGate2(true));
+                this.SectionsList.Add(new NPDStageGate3(true));
                 this.SectionsList.Add(new ApplicationStatusSection(true) { SectionName = SectionNameConstant.APPLICATIONSTATUS });
                 this.SectionsList.Add(new ActivityLogSection(NPDListNames.NPDACTIVITYLOG));
                 this.Buttons = new List<Button>();

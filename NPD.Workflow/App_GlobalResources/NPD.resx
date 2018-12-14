@@ -699,4 +699,13 @@
   <data name="Label_ProductImage" xml:space="preserve">
     <value>Product Image :</value>
   </data>
+  <data name="Section_Title_NPDStageGate1Section" xml:space="preserve">
+    <value>StageGate1 Section</value>
+  </data>
+  <data name="Section_Title_NPDStageGate2Section" xml:space="preserve">
+    <value>StageGate2 Section</value>
+  </data>
+  <data name="Section_Title_NPDStageGate3Section" xml:space="preserve">
+    <value>StageGate3 Section</value>
+  </data>
 </root>
