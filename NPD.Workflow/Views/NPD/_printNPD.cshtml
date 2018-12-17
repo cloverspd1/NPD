@@ -12,6 +12,11 @@
     NPDApprover2Section npdApprver2Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER2SECTION)) as NPDApprover2Section;
     NPDApprover3Section npdApprver3Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDAPPROVER3SECTION)) as NPDApprover3Section;
     NPDABSAdminSection npdABSAdminSection = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDABSADMINSECTION)) as NPDABSAdminSection;
+
+    NPDStageGate1 npdStageGate1Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE1SECTION)) as NPDStageGate1;
+    NPDStageGate2 npdStageGate2Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE2SECTION)) as NPDStageGate2;
+    NPDStageGate3 npdStageGate3Section = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.NPDSTAGEGATE3SECTION)) as NPDStageGate3;
+
     ActivityLogSection activityLog = form.SectionsList.FirstOrDefault(f => f.SectionName.Equals(NPDSectionName.ACTIVITYLOG)) as ActivityLogSection;
     ApplicationStatusSection appStatus = form.SectionsList.FirstOrDefault(f => f != null && f.SectionName.Equals(SectionNameConstant.APPLICATIONSTATUS)) as ApplicationStatusSection;
 
@@ -1185,6 +1190,147 @@
                                         @if (!string.IsNullOrWhiteSpace(npdABSAdminSection.ABSAdminAttachment))
                                         {
                                             foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdABSAdminSection.ABSAdminAttachment))
+                                            {
+                                                @file.FileName
+                                                <div class="clearfix"></div>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (npdStageGate1Section != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>STAGEGATE1 SECTION</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.ResourceValue("Label_Comments", ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        <span style="padding-left:20px;"></span>
+                                        @if (!string.IsNullOrWhiteSpace(npdStageGate1Section.CurrentApprover.Comments))
+                                        {
+                                            @(npdStageGate1Section.CurrentApprover.Comments)
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdStageGate1Section.StageGate1Attachment, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdStageGate1Section.StageGate1Attachment))
+                                        {
+                                            foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdStageGate1Section.StageGate1Attachment))
+                                            {
+                                                @file.FileName
+                                                <div class="clearfix"></div>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (npdStageGate2Section != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>STAGEGATE2 SECTION</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.ResourceValue("Label_Comments", ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        <span style="padding-left:20px;"></span>
+                                        @if (!string.IsNullOrWhiteSpace(npdStageGate2Section.CurrentApprover.Comments))
+                                        {
+                                            @(npdStageGate2Section.CurrentApprover.Comments)
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdStageGate2Section.StageGate2Attachment, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdStageGate2Section.StageGate2Attachment))
+                                        {
+                                            foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdStageGate2Section.StageGate2Attachment))
+                                            {
+                                                @file.FileName
+                                                <div class="clearfix"></div>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (npdStageGate3Section != null)
+                {
+                    <div id="card1" class="col-md-12 card" style="border:1px solid black">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <h4>STAGEGATE3 SECTION</h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.ResourceValue("Label_Comments", ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        <span style="padding-left:20px;"></span>
+                                        @if (!string.IsNullOrWhiteSpace(npdStageGate3Section.CurrentApprover.Comments))
+                                        {
+                                            @(npdStageGate3Section.CurrentApprover.Comments)
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-4 col-md-4 col-sm-4 text-left">
+                                        @Html.LabelFor(m => npdStageGate3Section.StageGate3Attachment, ResourceNames.NPD)
+                                    </div>
+                                    <div class="col-xs-8 col-md-8 col-sm-8 text-left">
+                                        @if (!string.IsNullOrWhiteSpace(npdStageGate3Section.StageGate3Attachment))
+                                        {
+                                            foreach (FileDetails file in JsonConvert.DeserializeObject<List<FileDetails>>(npdStageGate3Section.StageGate3Attachment))
                                             {
                                                 @file.FileName
                                                 <div class="clearfix"></div>

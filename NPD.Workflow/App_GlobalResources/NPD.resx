@@ -421,7 +421,7 @@
     <value>Status:</value>
   </data>
   <data name="Section_Title_NPDABSAdminSection" xml:space="preserve">
-    <value>ABS Admin Section</value>
+    <value>ABS Admin </value>
   </data>
   <data name="Popup_Title_AddProductCompetitor" xml:space="preserve">
     <value>Add Product Competitor Information of Category</value>
@@ -583,7 +583,7 @@
     <value>File Attachment is required.</value>
   </data>
   <data name="Text_ProductFeatureRequired" xml:space="preserve">
-    <value>Required to have atleast one product feature of each type (Mandatory,Preferred,Should not have).</value>
+    <value>Required to have atleast one product feature of each type ( Should have, Could have,Should not have).</value>
   </data>
   <data name="Text_CumulativeSalesProjectionRequired" xml:space="preserve">
     <value>Required to have atleast one cumulative sales projection of each type (6 months, 12 months, 24 months).</value>
@@ -707,5 +707,23 @@
   </data>
   <data name="Section_Title_NPDStageGate3Section" xml:space="preserve">
     <value>StageGate3 Section</value>
+  </data>
+  <data name="StageGate1Attachment" xml:space="preserve">
+    <value>StageGate1 Attachment</value>
+  </data>
+  <data name="StageGate2Attachment" xml:space="preserve">
+    <value>StageGate2 Attachment</value>
+  </data>
+  <data name="StageGate3Attachment" xml:space="preserve">
+    <value>StageGate3 Attachment</value>
+  </data>
+  <data name="Label_StageGate1Attachment" xml:space="preserve">
+    <value>StageGate1 Attachment</value>
+  </data>
+  <data name="Label_StageGate2Attachment" xml:space="preserve">
+    <value>StageGate2 Attachment</value>
+  </data>
+  <data name="Label_StageGate3Attachment" xml:space="preserve">
+    <value>StageGate3 Attachment</value>
   </data>
 </root>

@@ -103,6 +103,43 @@
         [DataMember, IsPerson(true, true, true), FieldColumnName("ABSAdmin")]
         public string ABSAdminName { get; set; }
 
+        [DataMember, IsPerson(true, true), FieldColumnName("StageGate1")]
+        public string StageGate1 { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UserName.
+        /// </summary>
+        /// <value>
+        /// The UserName.
+        /// </value>
+        [DataMember, IsPerson(true, true, true), FieldColumnName("StageGate1")]
+        public string StageGate1Name { get; set; }
+
+        [DataMember, IsPerson(true, true), FieldColumnName("StageGate2")]
+        public string StageGate2 { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UserName.
+        /// </summary>
+        /// <value>
+        /// The UserName.
+        /// </value>
+        [DataMember, IsPerson(true, true, true), FieldColumnName("StageGate2")]
+        public string StageGate2Name { get; set; }
+
+
+        [DataMember, IsPerson(true, true), FieldColumnName("StageGate3")]
+        public string StageGate3 { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UserName.
+        /// </summary>
+        /// <value>
+        /// The UserName.
+        /// </value>
+        [DataMember, IsPerson(true, true, true), FieldColumnName("StageGate3")]
+        public string StageGate3Name { get; set; }
+
         /// <summary>
         /// Gets or sets the value.
         /// </summary>

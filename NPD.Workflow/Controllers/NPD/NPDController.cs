@@ -81,6 +81,7 @@
                                     npdDetailSection.BusinessUnit = item.Item2;
                                     npdDetailSection.RequestViewer = item.Item3;
                                     npdDetailSection.RequestViewerName = item.Item4;
+                                    
                                     isValid = true;
                                     break;
                                 }
@@ -288,6 +289,9 @@
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDAPPROVER2SECTION));
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDAPPROVER3SECTION));
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDABSADMINSECTION));
+                    contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDSTAGEGATE1SECTION));
+                    contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDSTAGEGATE2SECTION));
+                    contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDSTAGEGATE3SECTION));
 
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == SectionNameConstant.APPLICATIONSTATUS));
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.ACTIVITYLOG));
@@ -383,6 +387,10 @@
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDAPPROVER2SECTION));
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDAPPROVER3SECTION));
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDABSADMINSECTION));
+
+                    contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDSTAGEGATE1SECTION));
+                    contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDSTAGEGATE2SECTION));
+                    contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.NPDSTAGEGATE3SECTION));
 
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == SectionNameConstant.APPLICATIONSTATUS));
                     contract.Forms[0].SectionsList.Remove(contract.Forms[0].SectionsList.FirstOrDefault(f => f.SectionName == NPDSectionName.ACTIVITYLOG));
@@ -648,6 +656,122 @@
 
         #endregion
 
+        #region "Save NPD StageGate1 Section"
+        //[HttpPost, ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult SaveStageGate1Section(NPDStageGate1 model)
+        {
+            ActionStatus status = new ActionStatus();
+
+            if (model != null && this.ValidateModelState(model))
+            {
+                Dictionary<string, string> objDict = this.GetSaveDataDictionary(this.CurrentUser.UserId,
+                    model.ActionStatus.ToString(), model.ButtonCaption);
+
+                model.Files = new List<FileDetails>();
+                model.Files.AddRange(FileListHelper.GenerateFileBytes(model.StageGate1Attachment));
+                model.StageGate1Attachment = string.Join(",", FileListHelper.GetFileNames(model.StageGate1Attachment));
+                if (!string.IsNullOrEmpty(model.SendBackTo))
+                {
+                    objDict[Parameter.SENDTOLEVEL] = model.SendBackTo;
+                }
+
+                if (model.ActionStatus == ButtonActionStatus.Rejected)
+                {
+                    model.OldNPDRejectedDate = DateTime.Now;
+                }
+                status = this.SaveSection(model, objDict);
+                status = this.GetMessage(status, System.Web.Mvc.Html.ResourceNames.NPD);
+            }
+            else
+            {
+                status.IsSucceed = false;
+                status.Messages = this.GetErrorMessage(System.Web.Mvc.Html.ResourceNames.NPD);
+            }
+
+
+            return this.Json(status);
+        }
+
+        #endregion
+
+        #region "Save NPD StageGate2 Section"
+        //[HttpPost, ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult SaveStageGate2Section(NPDStageGate2 model)
+        {
+            ActionStatus status = new ActionStatus();
+
+            if (model != null && this.ValidateModelState(model))
+            {
+                Dictionary<string, string> objDict = this.GetSaveDataDictionary(this.CurrentUser.UserId,
+                    model.ActionStatus.ToString(), model.ButtonCaption);
+
+                model.Files = new List<FileDetails>();
+                model.Files.AddRange(FileListHelper.GenerateFileBytes(model.StageGate2Attachment));
+                model.StageGate2Attachment = string.Join(",", FileListHelper.GetFileNames(model.StageGate2Attachment));
+                if (!string.IsNullOrEmpty(model.SendBackTo))
+                {
+                    objDict[Parameter.SENDTOLEVEL] = model.SendBackTo;
+                }
+
+                if (model.ActionStatus == ButtonActionStatus.Rejected)
+                {
+                    model.OldNPDRejectedDate = DateTime.Now;
+                }
+                status = this.SaveSection(model, objDict);
+                status = this.GetMessage(status, System.Web.Mvc.Html.ResourceNames.NPD);
+            }
+            else
+            {
+                status.IsSucceed = false;
+                status.Messages = this.GetErrorMessage(System.Web.Mvc.Html.ResourceNames.NPD);
+            }
+
+
+            return this.Json(status);
+        }
+
+        #endregion
+
+        #region "Save NPD StageGate3 Section"
+        //[HttpPost, ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult SaveStageGate3Section(NPDStageGate3 model)
+        {
+            ActionStatus status = new ActionStatus();
+
+            if (model != null && this.ValidateModelState(model))
+            {
+                Dictionary<string, string> objDict = this.GetSaveDataDictionary(this.CurrentUser.UserId,
+                    model.ActionStatus.ToString(), model.ButtonCaption);
+
+                model.Files = new List<FileDetails>();
+                model.Files.AddRange(FileListHelper.GenerateFileBytes(model.StageGate3Attachment));
+                model.StageGate3Attachment = string.Join(",", FileListHelper.GetFileNames(model.StageGate3Attachment));
+                if (!string.IsNullOrEmpty(model.SendBackTo))
+                {
+                    objDict[Parameter.SENDTOLEVEL] = model.SendBackTo;
+                }
+
+                if (model.ActionStatus == ButtonActionStatus.Rejected)
+                {
+                    model.OldNPDRejectedDate = DateTime.Now;
+                }
+                status = this.SaveSection(model, objDict);
+                status = this.GetMessage(status, System.Web.Mvc.Html.ResourceNames.NPD);
+            }
+            else
+            {
+                status.IsSucceed = false;
+                status.Messages = this.GetErrorMessage(System.Web.Mvc.Html.ResourceNames.NPD);
+            }
+
+
+            return this.Json(status);
+        }
+
+        #endregion
 
         #region "CRUD Product Feature Detail"
 
@@ -1083,7 +1207,7 @@
             bool Isvalid = true;
             if (lst.Count > 0)
             {
-                if (lst.FindAll(x => x.ProductFeature == "Mandatory" && x.ItemAction != ItemActionStatus.DELETED).Count == 0 || lst.FindAll(x => x.ProductFeature == "Should not have" && x.ItemAction != ItemActionStatus.DELETED).Count == 0||lst.FindAll(x=>x.ProductFeature== "Preferred" && x.ItemAction!=ItemActionStatus.DELETED).Count==0)
+                if (lst.FindAll(x => x.ProductFeature == "Should have" && x.ItemAction != ItemActionStatus.DELETED).Count == 0 || lst.FindAll(x => x.ProductFeature == "Should not have" && x.ItemAction != ItemActionStatus.DELETED).Count == 0||lst.FindAll(x=>x.ProductFeature== "Could have" && x.ItemAction!=ItemActionStatus.DELETED).Count==0)
                 {
                     Isvalid = false;
                 }

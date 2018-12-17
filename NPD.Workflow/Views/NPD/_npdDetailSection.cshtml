@@ -17,11 +17,7 @@
         ProductCategoryDetailMaster proddetailList = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PRODUCTCATEGORYDDETAIL)) as ProductCategoryDetailMaster;
         ProjectTypeMaster projTypeList = Model.MasterData.FirstOrDefault(x => x.NameOfMaster.Equals(Masters.PROJECTTYPEMASTER)) as ProjectTypeMaster;
 
-
-
-
       }
-
 
     var Approverlist = JSON.parse(@(new HtmlString(Json.Encode(Newtonsoft.Json.JsonConvert.SerializeObject(approverlist.Items.ToList())))));
     var ProductCategoryDetailList = JSON.parse(@(new HtmlString(Json.Encode(Newtonsoft.Json.JsonConvert.SerializeObject(proddetailList.Items.ToList())))));

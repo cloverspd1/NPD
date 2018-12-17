@@ -4,7 +4,7 @@
 @using NPD.CommonDataContract;
 @model NPDStageGate2
 
-@using (Ajax.BeginForm("SaveABSAdminSection", "DCN", new AjaxOptions
+@using (Ajax.BeginForm("SaveStageGate2Section", "DCN", new AjaxOptions
 {
     HttpMethod = "POST",
     LoadingElementId = "loading",
@@ -54,7 +54,7 @@
                         <span class="text-danger text-default-light">
                             Note: (Max. up to 2MB per file and you can upload maximum 10 files.)
                         </span>
-                        <div id="AttachmentABSAdmin" data-appname="@SiteURLs.NPDSITEURL">
+                        <div id="AttachmentStageGate2" data-appname="@SiteURLs.NPDSITEURL">
                         </div>
                         @Html.TextBoxFor(m => m.StageGate2Attachment, new { @class = "notvisible" })
                         @Html.ValidationMessageFor(m => m.StageGate2Attachment, ResourceNames.NPD)

@@ -4,8 +4,8 @@
 @model NPDProductFeature
 @{
     List<MasterDataItem> productFeatureList = new List<MasterDataItem>();
-    productFeatureList.Add(new MasterDataItem("Mandatory", "Mandatory"));
-    productFeatureList.Add(new MasterDataItem("Preferred", "Preferred"));
+    productFeatureList.Add(new MasterDataItem("Should have(Mandatory)", "Should have"));
+    productFeatureList.Add(new MasterDataItem("Could have(Preferred but not mandatory)", "Could have"));
     productFeatureList.Add(new MasterDataItem("Should not have", "Should not have"));
 }
 <div class="modal fade" id="addeditProductFeatureModel" tabindex="-1" role="dialog">

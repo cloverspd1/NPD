@@ -59,6 +59,33 @@ $(document).ready(function () {
         });
         uploadedFiles4 = BindFileList("ABSAdminAttachment", "AttachmentABSAdmin");
     }
+    if ($("#StageGate1Attachment").length != 0) {
+        BindFileUploadControl({
+            ElementId: 'AttachmentStageGate1', Params: {}, Url: "UploadFile",
+            AllowedExtensions: [],
+            MultipleFiles: true,
+            CallBack: "OnFileUploadedStageGate1"
+        });
+        uploadedFiles4 = BindFileList("StageGate1Attachment", "AttachmentStageGate1");
+    }
+    if ($("#StageGate2Attachment").length != 0) {
+        BindFileUploadControl({
+            ElementId: 'AttachmentStageGate2', Params: {}, Url: "UploadFile",
+            AllowedExtensions: [],
+            MultipleFiles: true,
+            CallBack: "OnFileUploadedStageGate2"
+        });
+        uploadedFiles4 = BindFileList("StageGate2Attachment", "AttachmentStageGate2");
+    }
+    if ($("#StageGate3Attachment").length != 0) {
+        BindFileUploadControl({
+            ElementId: 'AttachmentStageGate3', Params: {}, Url: "UploadFile",
+            AllowedExtensions: [],
+            MultipleFiles: true,
+            CallBack: "OnFileUploadedStageGate3"
+        });
+        uploadedFiles4 = BindFileList("StageGate3Attachment", "AttachmentStageGate3");
+    }
 
     if ($("#ProductImage").length != 0) {
         BindFileUploadControl({
@@ -195,6 +222,7 @@ $(document).ready(function () {
 
 
             $(Approverlist).each(function (i, item) {
+                debugger;
                 if (item.BusinessUnit == BusinessUnitvalue) {
                     $(".approver").each(function () {
                         var role = $(this).attr("data-dept");
@@ -452,6 +480,21 @@ function OnFileUploadedApprover3(result) {
 function OnFileUploadedABSAdmin(result) {
     uploadedFiles4.push(result);
     $("#ABSAdminAttachment").val(JSON.stringify(uploadedFiles4)).blur();
+}
+
+function OnFileUploadedStageGate1(result) {
+    uploadedFiles5.push(result);
+    $("#StageGate1Attachment").val(JSON.stringify(uploadedFiles5)).blur();
+}
+
+function OnFileUploadedStageGate2(result) {
+    uploadedFiles6.push(result);
+    $("#StageGate2Attachment").val(JSON.stringify(uploadedFiles6)).blur();
+}
+
+function OnFileUploadedStageGate3(result) {
+    uploadedFiles7.push(result);
+    $("#StageGate3Attachment").val(JSON.stringify(uploadedFiles7)).blur();
 }
 
 

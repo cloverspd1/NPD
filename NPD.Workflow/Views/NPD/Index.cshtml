@@ -169,11 +169,25 @@
                                 </div>
                         }
                             @if (npdABSAdminSection != null)
-                        {
-                            string sectionActiveCss = npdABSAdminSection.IsActive ? string.Empty : "disabled";
+                            {
+
+                                string npdABSAdminName = string.Empty;
+                                if (npdDetailSection != null)
+                                {
+                                    npdABSAdminName = npdDetailSection.ApproversList.FirstOrDefault(p => p.Role == NPDRoles.ABSADMIN).ApproverName;
+                                    if (string.IsNullOrWhiteSpace(npdABSAdminName))
+                                    {
+                                        npdABSAdminName = "ABSAdmin Section";
+                                    }
+                                    else
+                                    {
+                                        npdABSAdminName = npdABSAdminName + " Section";
+                                    }
+                                }
+                                string sectionActiveCss = npdABSAdminSection.IsActive ? string.Empty : "disabled";
                                 <div class="card @sectionActiveCss">
                                     <div class="card-head" data-toggle="collapse" data-target="#ABSAdminSection">
-                                        @Html.ResourceValue("Section_Title_NPDABSAdminSection", ResourceNames.NPD)
+                                        @Html.ResourceValue("Section_Title_NPDABSAdminSection", ResourceNames.NPD) @npdABSAdminName
 
                                         <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
                                     </div>
@@ -188,12 +202,27 @@
                                     <div class="clearfix"></div>
                                 </div>
                         }
+
                         @if (NPDStageGate1Section != null)
                         {
+                            string npdStageGate1Name = string.Empty;
+                            if (npdDetailSection != null)
+                            {
+                                npdStageGate1Name = npdDetailSection.ApproversList.FirstOrDefault(p => p.Role == NPDRoles.STAGEGATE1).ApproverName;
+                                if (string.IsNullOrWhiteSpace(npdStageGate1Name))
+                                {
+                                    npdStageGate1Name = "StageGate1 Section";
+                                }
+                                else
+                                {
+                                    npdStageGate1Name = npdStageGate1Name + " Section";
+                                }
+                            }
+
                             string sectionActiveCss = NPDStageGate1Section.IsActive ? string.Empty : "disabled";
                             <div class="card @sectionActiveCss">
                                 <div class="card-head" data-toggle="collapse" data-target="#NPDStageGate1Section">
-                                    @Html.ResourceValue("Section_Title_NPDStageGate1Section", ResourceNames.NPD)
+                                    @Html.ResourceValue("Section_Title_NPDStageGate1Section", ResourceNames.NPD) @npdStageGate1Name
 
                                     <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
                                 </div>
@@ -210,10 +239,24 @@
                         }
                         @if (NPDStageGate2Section != null)
                         {
+                            string npdStageGate2Name = string.Empty;
+                            if (npdDetailSection != null)
+                            {
+                                npdStageGate2Name = npdDetailSection.ApproversList.FirstOrDefault(p => p.Role == NPDRoles.STAGEGATE2).ApproverName;
+                                if (string.IsNullOrWhiteSpace(npdStageGate2Name))
+                                {
+                                    npdStageGate2Name = "StageGate2 Section";
+                                }
+                                else
+                                {
+                                    npdStageGate2Name = npdStageGate2Name + " Section";
+                                }
+                            }
+
                             string sectionActiveCss = NPDStageGate2Section.IsActive ? string.Empty : "disabled";
                             <div class="card @sectionActiveCss">
                                 <div class="card-head" data-toggle="collapse" data-target="#NPDStageGate2Section">
-                                    @Html.ResourceValue("Section_Title_NPDStageGate2Section", ResourceNames.NPD)
+                                    @Html.ResourceValue("Section_Title_NPDStageGate2Section", ResourceNames.NPD) @npdStageGate2Name
 
                                     <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
                                 </div>
@@ -230,10 +273,24 @@
                         }
                         @if (NPDStageGate3Section != null)
                         {
+                            string npdStageGate3Name = string.Empty;
+                            if (npdDetailSection != null)
+                            {
+                                npdStageGate3Name = npdDetailSection.ApproversList.FirstOrDefault(p => p.Role == NPDRoles.STAGEGATE3).ApproverName;
+                                if (string.IsNullOrWhiteSpace(npdStageGate3Name))
+                                {
+                                    npdStageGate3Name = "StageGate3 Section";
+                                }
+                                else
+                                {
+                                    npdStageGate3Name = npdStageGate3Name + " Section";
+                                }
+                            }
+
                             string sectionActiveCss = NPDStageGate3Section.IsActive ? string.Empty : "disabled";
                             <div class="card @sectionActiveCss">
                                 <div class="card-head" data-toggle="collapse" data-target="#NPDStageGate3Section">
-                                    @Html.ResourceValue("Section_Title_NPDStageGate3Section", ResourceNames.NPD)
+                                    @Html.ResourceValue("Section_Title_NPDStageGate3Section", ResourceNames.NPD) @npdStageGate3Name
 
                                     <div class="btn collapse-btn"><i class="fa fa-chevron-down"></i></div>
                                 </div>

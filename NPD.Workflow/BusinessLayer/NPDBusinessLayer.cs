@@ -137,7 +137,7 @@
                         }
 
                         //if ((sectionDetails.Status == FormStatus.COMPLETED || sectionDetails.Status == FormStatus.REJECTED) && sectionDetails.ApproversList.Any(p => p.Role == NPDRoles.ABSADMIN && p.Approver != userID))
-                        if ((sectionDetails.Status == FormStatus.COMPLETED || sectionDetails.Status == FormStatus.REJECTED) && !approvalMatrix.ApplicationStatusList.Any(p => p.Role == NPDRoles.ABSADMIN && !String.IsNullOrEmpty(p.Approver) && p.Approver.Split(',').Contains(userID.Trim())))
+                        if ((sectionDetails.Status == FormStatus.COMPLETED || sectionDetails.Status == FormStatus.REJECTED) && !approvalMatrix.ApplicationStatusList.Any(p => p.Role == NPDRoles.STAGEGATE3 && !String.IsNullOrEmpty(p.Approver) && p.Approver.Split(',').Contains(userID.Trim())))
                         {
                             if (npdForm.Buttons.FirstOrDefault(p => p.Name == "Print") != null)
                             {

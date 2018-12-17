@@ -256,6 +256,13 @@ namespace NPD.Workflow.Models.Common
         /// </summary>
         public const string ABSADMIN = "ABS Admin";
 
+        public const string STAGEGATE1 = "StageGate1";
+
+        public const string STAGEGATE2 = "StageGate2";
+
+        public const string STAGEGATE3 = "StageGate3";
+
+
     }
 
     public enum URLAction
