@@ -129,13 +129,13 @@
                         //this.SPCurrentUser.UserId = "31";  //Sharma Atul
                         //this.SPCurrentUser.UserId = "30";  //Jade Ashish
                        // this.SPCurrentUser.UserId = "118";  //Yogita
-                       // this.SPCurrentUser.UserId = "130";  //Murlidhar Nayker
+                        this.SPCurrentUser.UserId = "130";  //Murlidhar Nayker
                                                            //this.SPCurrentUser.UserId = "32";  //Jade Ashish
                                                            // this.SPCurrentUser.UserId = "33";  //Joshi Sanjeev
                                                            //this.SPCurrentUser.UserId = "34";  //Sharma Atul
                                                            //this.SPCurrentUser.UserId = "58";  //Vashishtha Manishkumar
                                                            // this.SPCurrentUser.UserId = "105";  //Pradhan Lalit
-                                                            this.SPCurrentUser.UserId = "32";  //Patil bhushan
+                                                           // this.SPCurrentUser.UserId = "32";  //Patil bhushan
                                                             //this.SPCurrentUser.UserId = "61";  //Vashishtha Manishkumar
                                                             // this.SPCurrentUser.UserId = "118";  //Vashishtha Manishkumar
                                                             //this.SPCurrentUser.UserId = "28";  //Patkar Mankesh
