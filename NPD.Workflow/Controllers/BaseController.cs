@@ -126,9 +126,9 @@
                         this.SPCurrentUser = new UserDetails();
                         // this.SPCurrentUser.UserId = "24";
                         //this.SPCurrentUser.UserId = "29";  //Dipankar Nitya
-                         this.SPCurrentUser.UserId = "20";  //cloverspd1
+                        // this.SPCurrentUser.UserId = "20";  //cloverspd1
                        // this.SPCurrentUser.UserId = "34";  //gadhari suresh
-                        // this.SPCurrentUser.UserId = "32";  //patil bhushan
+                         this.SPCurrentUser.UserId = "32";  //patil bhushan
                          //this.SPCurrentUser.UserId = "30";  //Dumbre Amit
                          //this.SPCurrentUser.UserId = "31";  //Dnyandev
                         //this.SPCurrentUser.UserId = "31";  //Sharma Atul
