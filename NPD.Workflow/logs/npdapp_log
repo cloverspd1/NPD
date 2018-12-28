@@ -6295,3 +6295,15 @@ System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAliv
 2018-12-27 17:58:13,855 [26] INFO  - WCF - called Helper.GetFormData, 
 2018-12-27 17:58:13,947 [7] INFO  - WCF - Helper.GetButtons for role 'Creator', appName='NPD', formName='NPD Form', status='', other params={}, 
 2018-12-27 17:58:22,445 [23] INFO  - MVC - Begin Ajax Request http://localhost:51079/__browserLink/requestData/da775e69530c4f048b6d430886e4e318?version=2, 
+2018-12-27 18:03:22,777 [33] ERROR - The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+System.Web.HttpException (0x80004005): The controller for path '/KeepSessionAlive' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-12-27 18:03:22,885 [38] INFO  - MVC - Begin Ajax Request http://localhost:51079/KeepSessionAlive, 
